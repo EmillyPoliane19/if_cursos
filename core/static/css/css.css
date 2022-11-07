@@ -1,0 +1,12 @@
+
+.navbar, .offcanvas-header{
+    background: url("/static/imgs/poligonos.png");
+}
+
+body {
+    background-image: url("/static/imgs/fundo.png");
+}
+.navbar-toggler {
+    color:#aa3b3d;
+    background-color: #aa3b3d;
+}
