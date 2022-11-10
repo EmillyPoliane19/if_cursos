@@ -6,7 +6,17 @@
 body {
     background-image: url("/static/imgs/fundo.png");
 }
+
+.logo_if{
+    border-radius: 15px;
+}
 .navbar-toggler {
     color:#aa3b3d;
     background-color: #aa3b3d;
+}
+.offcanvas-title{
+   color:#ffff;
+}
+.offcanvas-body{
+    background-color: #fAf8f9;
 }
