@@ -1,10 +1,11 @@
-
+/*Navbar do site*/
 .navbar, .offcanvas-header{
     background: url("/static/imgs/poligonos.png");
 }
 
 body {
     background-image: url("/static/imgs/fundo.png");
+    padding-top: 20px;
 }
 
 .logo_if{
