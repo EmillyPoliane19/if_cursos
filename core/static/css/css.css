@@ -21,3 +21,14 @@ body {
 .offcanvas-body{
     background-color: #fAf8f9;
 }
+
+/*Geral*/
+.b1{
+    background-color: green;
+    color: green;
+}
+
+.b1:hover{
+    background-color: rgb(0, 39, 0);
+    color: rgb(0, 39, 0);
+}

@@ -26,5 +26,9 @@ def autenticar(request):
             return redirect('login')
     else:
         return render(request, 'registration\login.html')
-# Create your views here.
+
+#Geral
+
+def geral(request):
+    return render(request,'geral.html') 
 
