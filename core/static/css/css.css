@@ -36,3 +36,14 @@ body {
 .texto-geral{
     color: rgb(0, 39, 0);
 }
+
+/*Comentários*/
+
+.c1{
+    margin: 0 auto; 
+    text-align: center;
+  }
+
+h1{
+    color: rgb(0, 39, 0);
+}

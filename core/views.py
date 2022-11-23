@@ -28,7 +28,17 @@ def autenticar(request):
         return render(request, 'registration\login.html')
 
 #Geral
-
 def geral(request):
     return render(request,'geral.html') 
 
+#Comentários
+def comentario(request):
+    return render(request, 'comentarios.html')
+
+#Cursos
+def cursos(request):
+    return render(request, 'cursos.html')
+
+#Cadastro de curso
+def cadastro(request):
+    return render(request, 'cadastro_curso.html')
