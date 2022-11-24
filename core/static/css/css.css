@@ -26,6 +26,7 @@ body {
 .b1{
     background-color: green;
     color: green;
+    border-radius: 40px;
 }
 
 .b1:hover{

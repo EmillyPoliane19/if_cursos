@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from core.views import home,filtro, login, geral, comentario, cursos, cadastro
+from core.views import home,filtro, login, geral, comentario, cursos, cadastro, cadastro_usuario, area, modalidade
 from django.contrib.auth.views import LoginView
 from django.contrib.auth.views import LoginView, LogoutView
 
@@ -30,4 +30,7 @@ urlpatterns = [
     path('comentario/', comentario, name='comentario'),
     path('cursos/', cursos, name='cursos'),
     path('cadastro/', cadastro, name='cadastro'),
+    path('cadastro_usuario/', cadastro_usuario, name='cadastro_usuario'),
+    path('area/', area, name='area'),
+     path('modalidade/', modalidade, name='modalidade'),
 ]

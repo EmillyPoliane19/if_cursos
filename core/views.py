@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login
+from .models import Usuario
 
 #Página Inicial
 def home(request):
@@ -42,3 +43,25 @@ def cursos(request):
 #Cadastro de curso
 def cadastro(request):
     return render(request, 'cadastro_curso.html')
+
+#Áreas
+def area(request):
+    return render (request, 'area.html')
+
+#Modalidades
+def modalidade(request):
+    return render (request, 'modalidade.html')
+
+#Model Usuário
+def cadastro_usuario(request):
+    user = Usuario.objects.create_user(
+        username='admin',
+        email='admin@email.com',
+        cpf='11111111111',
+        nome='Administrador',
+        matricula='11111111111111',
+        password='admin12345',
+        data='01/01/2001',
+        is_superuser=False)
+    user.save()
+    return redirect('home')
