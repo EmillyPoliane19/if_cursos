@@ -22,6 +22,12 @@ body {
     background-color: #fAf8f9;
 }
 
+/*Página inicial*/
+.carousel-control-prev, .carousel-control-next{
+    bottom: 75%;
+}
+
+
 /*Geral*/
 .b1{
     background-color: green;
