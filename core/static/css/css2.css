@@ -1,0 +1,23 @@
+main{
+    padding-top: 100px;
+    }
+
+.carousel{
+    margin-left: 360px;
+    margin-right: 360px;
+    margin: 0 auto; 
+}
+
+.carousel-control-prev, .carousel-control-next{
+    bottom: 45%;
+}
+
+.carousel-inner{
+    width: 850px;
+    height: 850px;
+}
+
+.img2, .img3{
+    height: 500px;
+    width: 400px;
+}
