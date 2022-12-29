@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect #Adicionei o redirect
 from django.contrib.auth import authenticate, login
 from .models import Usuario
 
@@ -55,13 +55,14 @@ def modalidade(request):
 #Model Usuário
 def cadastro_usuario(request):
     user = Usuario.objects.create_user(
-        username='admin',
+        username='admin2',
         email='admin@email.com',
-        cpf='11111111111',
+        cpf='222222222',
         nome='Administrador',
-        matricula='11111111111111',
+        matricula='222222',
+        telefone='84999999999', #Adicionei telefone
         password='admin12345',
-        data='01/01/2001',
-        is_superuser=False)
+        data='2001-01-01', #mudei o formato
+        is_superuser=True)
     user.save()
     return redirect('home')
