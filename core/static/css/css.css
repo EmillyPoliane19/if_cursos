@@ -56,3 +56,13 @@ body {
 h1{
     color: rgb(0, 39, 0);
 }
+
+.bloco_curso{
+    height: 500px;
+    width: 1000px;
+    margin-left: 360px;
+    margin-right: 360px;
+    margin: 0 auto; 
+    color: green;
+    background-color: green;
+}

@@ -21,3 +21,17 @@ main{
     height: 500px;
     width: 400px;
 }
+
+.curso{ 
+    text-align: left;
+}
+
+.bloco_curso{
+    height: 300px;
+    width: 1800px;
+    margin-left: 360px;
+    margin-right: 360px;
+    margin: 0 auto; 
+    color: green;
+    background-color: green;
+}
