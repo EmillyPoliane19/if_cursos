@@ -6,7 +6,7 @@
 
 
     <!--Body da Página-->
-   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" style="height: 850px; width: 850px;">
+   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="false" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -41,20 +41,25 @@
                 <div class="row g-0">
                   <div class="col-md-12">
                     <div class="card-body">
-                      <div>
-                                            
+                      <div class="row row-cols-3 blococurso2">
+                      <div class="col-3">  
                       <a class="btn botao-curso" href="{% url 'cursos' %}" role="group" style="height: 250px; width: 250px;">
                         <img src="{% static 'imgs/cursos.png' %}" style="height: 140px; width: 140px;"></a>
                         <p class="texto-curso">INFORMÁTICA</p>
+                      </div>
 
+                      <div class="col-3">
                       <a class="btn botao-curso" href="{% url 'cursos' %}" role="group" style="height: 250px; width: 250px;">
                         <img src="{% static 'imgs/cursos.png' %}" style="height: 140px; width: 140px;"></a>
                         <p class="texto-curso">ELETROMECÂNICA</p>
+                      </div>
                       
+                      <div class="col-3">
                       <a class="btn botao-curso" href="{% url 'cursos' %}" role="group" style="height: 250px; width: 250px;">
                         <img src="{% static 'imgs/cursos.png' %}" style="height: 140px; width: 140px;"></a>
                         <p class="texto-curso">EVENTOS</p>
-
+                      </div>
+                  </div>
 
                       </div>
                     </div>

@@ -9,15 +9,21 @@ main{
     margin-right: 360px;
     margin-bottom: 360px;
     margin: 0 auto; 
+    height: 850px; 
+    width: 850px;
 }
 
 .carousel-control-prev, .carousel-control-next{
-    bottom: 10%;
+    bottom: 50%;
 }
 
 .carousel-inner{
     width: 850px;
     height: 850px;
+}
+
+.carousel-indicators{
+    bottom: 40%;
 }
 
 .img2, .img3{
@@ -56,4 +62,6 @@ main{
 .texto-curso{
     color: white;
     font-size: 30px;
+    
 }
+
