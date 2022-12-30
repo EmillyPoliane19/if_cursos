@@ -1,15 +1,18 @@
 main{
     padding-top: 100px;
+    padding-bottom: 100px;
     }
 
+/*Carousel*/
 .carousel{
     margin-left: 360px;
     margin-right: 360px;
+    margin-bottom: 360px;
     margin: 0 auto; 
 }
 
 .carousel-control-prev, .carousel-control-next{
-    bottom: 45%;
+    bottom: 10%;
 }
 
 .carousel-inner{
@@ -26,12 +29,31 @@ main{
     text-align: left;
 }
 
-.bloco_curso{
-    height: 300px;
+
+/*Bloco dos cursos*/
+.blococurso{
+    height: 500px;
     width: 1800px;
     margin-left: 360px;
     margin-right: 360px;
     margin: 0 auto; 
     color: green;
     background-color: green;
+}
+
+.botao-curso{
+    background-color: rgb(78, 197, 78);
+    color: rgb(78, 197, 78);
+    border-radius: 500px;
+   
+}
+
+.botao-curso:hover{
+    background-color: rgb(0, 83, 0);
+    color: rgb(0, 83, 0);
+}
+
+.texto-curso{
+    color: white;
+    font-size: 30px;
 }

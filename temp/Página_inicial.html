@@ -3,10 +3,12 @@
 {% load static %}
 
 {% block conteudo %}
+
+
     <!--Body da Página-->
    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" style="height: 850px; width: 850px;">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="false" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
@@ -31,24 +33,35 @@
         </button>
       </div>
 
-      <div>
-      <h1 class="curso">Cursos regulares</h1>
+
       <div class="container-fluid">
+        <h1>Cursos regulares</h1>
             <div class="row">    
-                <div class="card bloco_curso" style=>
+                <div class="card blococurso" style=>
                 <div class="row g-0">
-                  <div class="col-md-8">
+                  <div class="col-md-12">
                     <div class="card-body">
-                      <p class="card-text">
-                     
-                      </p>
+                      <div>
+                                            
+                      <a class="btn botao-curso" href="{% url 'cursos' %}" role="group" style="height: 250px; width: 250px;">
+                        <img src="{% static 'imgs/cursos.png' %}" style="height: 140px; width: 140px;"></a>
+                        <p class="texto-curso">INFORMÁTICA</p>
+
+                      <a class="btn botao-curso" href="{% url 'cursos' %}" role="group" style="height: 250px; width: 250px;">
+                        <img src="{% static 'imgs/cursos.png' %}" style="height: 140px; width: 140px;"></a>
+                        <p class="texto-curso">ELETROMECÂNICA</p>
+                      
+                      <a class="btn botao-curso" href="{% url 'cursos' %}" role="group" style="height: 250px; width: 250px;">
+                        <img src="{% static 'imgs/cursos.png' %}" style="height: 140px; width: 140px;"></a>
+                        <p class="texto-curso">EVENTOS</p>
+
+
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-         </div>
-        </div>
 
 {% endblock %}
      
