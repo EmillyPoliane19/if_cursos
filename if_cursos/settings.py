@@ -125,7 +125,7 @@ STATICFILES_DIRS = [
 
 LOGIN_URL = '/login/'
 
-LOGIN_REDIRECT_URL = 'perfil'
+LOGIN_REDIRECT_URL = 'geral'
 
 LOGOUT_REDIRECT_URL = 'home'
 
@@ -135,3 +135,5 @@ LOGOUT_REDIRECT_URL = 'home'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'core.Usuario'
+
+AUTH_PASSWD_VALIDATORS = []
