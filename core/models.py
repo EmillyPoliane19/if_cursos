@@ -10,3 +10,7 @@ class Usuario(AbstractUser):
     
 
     USERNAME_FIELD = 'cpf'
+
+class Modalidade(models.Model):
+   id = models.CharField('Id', max_length=14, primary_key=True) 
+   nome = models.CharField('Nome', max_length=100)

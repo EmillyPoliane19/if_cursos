@@ -1,0 +1,36 @@
+{% extends 'base2.html' %}
+{% load widget_tweaks %}
+{% load static %}
+
+{% block conteudo %}
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-6"><h1>Cadastro de modalidades</h1></div>
+      </div>
+            <div class="row">    
+                <div class="card c1">
+                <div class="row g-0">
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <div>
+                      <form method="post" enctype="multipart/form-data">
+                      {% csrf_token %}
+                      <p class="pt">ID:
+                      <p class="pcad">{{ form_modalidade.id }}</p>  
+
+                      <p class="pt">Nome:</p>
+                      <p class="pcad">{{ form_modalidade.nome}} </p>
+                
+                      <p style="padding-top: 10px;" class="cadastro"><input type="submit" 
+                          value="Cadastrar" class="btn btn-success cad" /></p>
+                      </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+         </div>
+
+    
+{% endblock %}

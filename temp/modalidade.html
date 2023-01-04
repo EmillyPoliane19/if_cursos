@@ -6,7 +6,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-6"><h1>Modalidades</h1></div>
-        <div class="col-6"><a class="btn b2" href="{% url 'cadastro' %}" role="button" style="height: 40px; width: 40px;">
+        <div class="col-6"><a class="btn b2" href="{% url 'cadastro_modalidade' %}" role="button" style="height: 40px; width: 40px;">
           <img src="{% static 'imgs/sinal de mais.png' %}" style="height: 15px; width: 15px;"></a></div>
       </div>
             <div class="row">    
@@ -15,7 +15,16 @@
                   <div class="col-md-8">
                     <div class="card-body">
                       <p class="card-text">
-                     
+                        {% for novamodalidade in todas_modalidades %}
+                        {{novamodalidade.nome}}
+                        {{novamodalidade.id}}
+                        <a href="{% url 'editar_modalidade' novamodalidade.id %}">
+                          <button type="button" class="btn btn-success">Editar</button>
+                        </a>
+                        <a href="{% url 'remover_modalidade' novomodalidade.id %}">
+                            <button type="button" class="btn btn-danger">Remover</button>
+                            </a>
+
                       </p>
                     </div>
                   </div>

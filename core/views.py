@@ -3,7 +3,8 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
-from .models import Usuario
+from .models import Usuario, Modalidade
+from .forms import ModalidadeForm
 
 #Página Inicial__________________________________________________________________________________________________________
 def home(request):
@@ -58,7 +59,9 @@ def cursos(request):
 @login_required
 def cadastro(request):
     return render(request, 'cadastro_curso.html')
-
+#Cadastro de modalidade
+def cadastro_modalidade(request):
+    return render(request, 'cadastro_modalidade.html')
 
 #Páginas do site________________________________________________________________________________________________________
 #Áreas
@@ -87,3 +90,43 @@ def cadastro_usuario(request):
         is_superuser=True)
     user.save()
     return redirect('home')
+
+#CRUD Modalidades________________________________________________________________________________________________________
+def listar_modalidades(request):
+    modalidade = Modalidade.objects.all()
+    contexto = {
+        'todas_modalidade': modalidade
+    }
+    return render(request, 'modalidade.html', contexto)
+
+def cadastrar_modalidades(request):
+    form = ModalidadeForm(request. POST or None, request.FILES or None)
+    
+    if form.is_valid():
+        form.save()
+        return redirect('listar_modalidades')
+
+    contexto = {
+        'form_modalidade': form
+    }
+    return render(request, 'cadastro_modalidade.html', contexto)
+
+def editar_modalidades(request, id):
+    modalidade = Modalidade.objects.get(pk=id)
+    
+    form = ModalidadeForm(request.POST or None, request.FILES or None ,instance=modalidade)
+   
+    if form.is_valid():
+        form.save()
+        return redirect('listar_modalidades')
+    
+    contexto = {
+        'form_modalidade': form
+    }
+
+    return render(request, 'cadastro_modalidade.html', contexto)
+
+def remover_modalidades(request, id):
+    modalidade = Modalidade.objects.get(pk=id)
+    modalidade.delete()
+    return redirect('listar_modalidades')
