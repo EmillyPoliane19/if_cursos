@@ -3,8 +3,8 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
-from .models import Usuario, Modalidade
-from .forms import ModalidadeForm
+from .models import Usuario, Modalidade, Area
+from .forms import ModalidadeForm, AreaForm
 
 #Página Inicial__________________________________________________________________________________________________________
 def home(request):
@@ -62,6 +62,9 @@ def cadastro(request):
 #Cadastro de modalidade
 def cadastro_modalidade(request):
     return render(request, 'cadastro_modalidade.html')
+#Cadastro de area
+def cadastro_area(request):
+    return render(request, 'cadastro_area.html')
 
 #Páginas do site________________________________________________________________________________________________________
 #Áreas
@@ -130,3 +133,44 @@ def remover_modalidades(request, id):
     modalidade = Modalidade.objects.get(pk=id)
     modalidade.delete()
     return redirect('listar_modalidades')
+
+
+#CRUD Area________________________________________________________________________________________________________
+def listar_areas(request):
+    area = Area.objects.all()
+    contexto = {
+        'todas_areas': area
+    }
+    return render(request, 'area.html', contexto)
+
+def cadastrar_areas(request):
+    form = AreaForm(request. POST or None, request.FILES or None)
+    
+    if form.is_valid():
+        form.save()
+        return redirect('listar_areas')
+
+    contexto = {
+        'form_area': form
+    }
+    return render(request, 'cadastro_area.html', contexto)
+
+def editar_areas(request, id):
+    area = Area.objects.get(pk=id)
+    
+    form = AreaForm(request.POST or None, request.FILES or None ,instance=area)
+   
+    if form.is_valid():
+        form.save()
+        return redirect('listar_areas')
+    
+    contexto = {
+        'form_area': form
+    }
+
+    return render(request, 'cadastro_area.html', contexto)
+
+def remover_areas(request, id):
+    area = Area.objects.get(pk=id)
+    area.delete()
+    return redirect('listar_areas')

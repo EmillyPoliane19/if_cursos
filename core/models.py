@@ -14,3 +14,7 @@ class Usuario(AbstractUser):
 class Modalidade(models.Model):
    id = models.CharField('Id', max_length=14, primary_key=True) 
    nome = models.CharField('Nome', max_length=100)
+
+class Area(models.Model):
+   id = models.CharField('Id', max_length=14, primary_key=True) 
+   nome = models.CharField('Nome', max_length=100)
