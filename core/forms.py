@@ -12,3 +12,9 @@ class AreaForm(ModelForm):
     class Meta:
         model = Area
         fields = ['nome']
+
+
+class UsuarioCreationForm(UserCreationForm):
+    class Meta:
+        model = Usuario
+        fields = ['password1','password2','cpf','nome','data','telefone','matricula']
