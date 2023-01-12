@@ -61,3 +61,12 @@ h1{
     color: rgb(0, 39, 0);
 }
 
+footer {
+    margin-top: 1s9px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;    
+    text-align: center;
+    line-height: 100px;
+}

@@ -20,6 +20,7 @@ main{
 .carousel-inner{
     width: 850px;
     height: 850px;
+    margin-bottom: 10px;
 }
 
 .carousel-indicators{
@@ -38,7 +39,7 @@ main{
 
 /*Bloco dos cursos*/
 .blococurso{
-    height: 500px;
+    height: 400px;
     width: 1800px;
     margin-left: 360px;
     margin-right: 360px;
