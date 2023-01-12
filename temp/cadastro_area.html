@@ -5,7 +5,7 @@
 {% block conteudo %}
     <div class="container-fluid">
     <div class="row">
-    <div class="col-7"><h1>Cadastro de area</h1></div>
+    <div class="col-7"><h1>Cadastro de área</h1></div>
     </div>
     <div class="row">    
         <div class="card c1">
@@ -14,9 +14,11 @@
             <div>
             <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
-            <p class="pt">ID:{{ form_area.id }}</p>  
+            <p class="texto-modal">ID:</p>
+            {{ form_area.id }}  
 
-            <p class="pt">Nome:{{ form_area.nome}} </p>
+            <p class="texto-modal">Nome:</p>
+            {{ form_area.nome}} 
                 
             <p style="padding-top: 10px;" class="cadastro">
             <input type="submit"value="Cadastrar" class="btn btn-success cad" /></p>

@@ -15,12 +15,12 @@
                       <div>
                       <form method="post" enctype="multipart/form-data">
                       {% csrf_token %}
-                      <p class="pt">ID:
-                      <p class="pcad">{{ form_modalidade.id }}</p>  
+                      <p class="texto-modal">ID:</p>
+                      {{ form_modalidade.id }}
 
-                      <p class="pt">Nome:</p>
-                      <p class="pcad">{{ form_modalidade.nome}} </p>
-                
+                      <p class="texto-modal">Nome:</p>
+                      {{ form_modalidade.nome}}  
+
                       <p style="padding-top: 10px;" class="cadastro"><input type="submit" 
                           value="Cadastrar" class="btn btn-success cad" /></p>
                       </form>
