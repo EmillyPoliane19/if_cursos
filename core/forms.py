@@ -1,5 +1,6 @@
 from django.forms import ModelForm
-from .models import Modalidade, Area
+from .models import Modalidade, Area, Usuario
+from django.contrib.auth.forms import UserCreationForm
 
 class ModalidadeForm(ModelForm):
     class Meta:
@@ -11,3 +12,9 @@ class AreaForm(ModelForm):
     class Meta:
         model = Area
         fields = ['id', 'nome']
+
+
+class UsuarioCreationForm(UserCreationForm):
+    class Meta:
+        model = Usuario
+        fields = ['password1','password2','cpf','nome','data','telefone','matricula']

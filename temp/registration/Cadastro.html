@@ -3,10 +3,17 @@
 {% load static %}
 
 {% block conteudo %}
+<form method="post">
   {% csrf_token %}
-  <p>Usuário: {{ form.username }}</p>
+   <p>Matrícula: {{ form.matricula }}</p>
+  <p>Nome: {{ form.nome }}</p>
+  <p>Telefone: {{ form.telefone }}</p>
+  <p>Data de Nascimento: {{ form.data }}</p>
+  <p>CPF: {{ form.cpf }}</p>
   <p>Senha: {{ form.password1 }}</p>
   <p>Repetir Senha: {{ form.password2 }}</p>
-  <p>CPF: {{ form.cpf }}</p>
+  
+  
   <input type="submit" value="Cadastrar">
+</form>
 {% endblock %}
