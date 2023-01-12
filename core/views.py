@@ -4,7 +4,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from .models import Usuario, Modalidade, Area
-from .forms import ModalidadeForm, AreaForm
+from .forms import ModalidadeForm, AreaForm, UsuarioCreationForm
 
 #Página Inicial__________________________________________________________________________________________________________
 def home(request):
@@ -33,7 +33,7 @@ def autenticar(request):
 
 #Página de Cadastro________________________________________________________________________________________________________
 def registro(request):
-    form = UserCreationForm (request.POST or None)
+    form = UsuarioCreationForm (request.POST or None)
     if form.is_valid():
         form.save()
         return redirect('login')
@@ -82,9 +82,9 @@ def filtro(request):
 #Model Usuário
 def cadastro_usuario(request):
     user = Usuario.objects.create_user(
-        username='admin',
+        username='admin4',
         email='admin@email.com',
-        cpf='1234',
+        cpf='12345',
         nome='Administrador',
         matricula='222222',
         telefone='84999999999',

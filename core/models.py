@@ -7,7 +7,7 @@ class Usuario(AbstractUser):
     cpf = models.CharField('CPF', max_length=11, unique=True) 
     telefone = models.CharField('Telefone', max_length=11)
     matricula = models.CharField('Matrícula', max_length=14)
-    
+    username = models.CharField(null=True, max_length=50)
 
     USERNAME_FIELD = 'cpf'
 

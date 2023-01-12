@@ -1,5 +1,6 @@
 from django.forms import ModelForm
-from .models import Modalidade, Area
+from .models import Modalidade, Area, Usuario
+from django.contrib.auth.forms import UserCreationForm
 
 class ModalidadeForm(ModelForm):
     class Meta:
