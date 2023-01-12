@@ -59,9 +59,6 @@ def cursos(request):
 @login_required
 def cadastro(request):
     return render(request, 'cadastro_curso.html')
-#Cadastro de modalidade
-def cadastro_modalidade(request):
-    return render(request, 'cadastro_modalidade.html')
 #Cadastro de area
 def cadastro_area(request):
     return render(request, 'cadastro_area.html')
@@ -102,12 +99,12 @@ def listar_modalidades(request):
     }
     return render(request, 'modalidade.html', contexto)
 
-def cadastrar_modalidades(request):
-    form = ModalidadeForm(request. POST or None, request.FILES or None)
+def cadastro_modalidade(request):
+    form = ModalidadeForm(request. POST or None)
     
     if form.is_valid():
         form.save()
-        return redirect('listar_modalidades')
+        return redirect('modalidade')
 
     contexto = {
         'form_modalidade': form
@@ -121,7 +118,7 @@ def editar_modalidades(request, id):
    
     if form.is_valid():
         form.save()
-        return redirect('listar_modalidades')
+        return redirect('modalidade')
     
     contexto = {
         'form_modalidade': form

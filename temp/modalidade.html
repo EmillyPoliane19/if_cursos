@@ -15,16 +15,11 @@
                   <div class="col-md-8">
                     <div class="card-body">
                       <p class="card-text">
-                        {% for novamodalidade in todas_modalidades %}
+                        {% for novamodalidade in todas_modalidade %}
                         {{novamodalidade.nome}}
                         {{novamodalidade.id}}
-                        <a href="{% url 'editar_modalidade' novamodalidade.id %}">
-                          <button type="button" class="btn btn-success">Editar</button>
-                        </a>
-                        <a href="{% url 'remover_modalidade' novomodalidade.id %}">
-                            <button type="button" class="btn btn-danger">Remover</button>
-                            </a>
-
+                        <!-- Colocar EDITAR e REMOVER AQUI - lembrar de criar as URLs para funcionar -->
+                          {% endfor %}
                       </p>
                     </div>
                   </div>
