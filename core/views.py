@@ -77,6 +77,7 @@ def filtro(request):
 
 #Usuário________________________________________________________________________________________________________
 #Model Usuário
+
 def cadastro_usuario(request):
     user = Usuario.objects.create_user(
         username='admin4',

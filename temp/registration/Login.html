@@ -7,7 +7,8 @@
     <h2>Login</h2>
     <form method="post">
       {% csrf_token %}
-      <p>Usuário: {{ form.username }}</p>
+      
+      <p>Cpf: {{ form.username }}</p>
       <p>Senha: {{ form.password }}</p>
       <p><input type="submit" value="Autenticar" /></p>
     </form>
