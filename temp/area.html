@@ -8,7 +8,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-6"><h1>Áreas</h1></div>
-        <div class="col-6"><a class="btn b2" href="{% url 'cadastro' %}" role="button" style="height: 40px; width: 40px;">
+        <div class="col-6"><a class="btn b2" href="{% url 'cadastro_area' %}" role="button" style="height: 40px; width: 40px;">
           <img src="{% static 'imgs/sinal de mais.png' %}" style="height: 15px; width: 15px;"></a></div>
       </div>
             <div class="row">    
@@ -18,14 +18,15 @@
                     <div class="card-body">
                       <p class="card-text">
                         {% for novaarea in todas_areas %}
-                        Nome: {{novamodalidade.nome}}
-                        ID: {{novamodalidade.id}}
-                        <a href="{% url 'editar_area' novaarea.id %}">
+                        <p class="texto-modal">
+                        Nome: {{novaarea.nome}}  {{novaarea.id}}
+                        <a href="{% url 'editar_areas' novaarea.id %}">
                           <button type="button" class="btn btn-success">Editar</button>
                         </a>
-                        <a href="{% url 'remover_area' novoarea.id %}">
+                        <a href="{% url 'remover_areas' novoarea.id %}">
                             <button type="button" class="btn btn-danger">Remover</button>
                             </a>
+                          </p>
                          {% endfor %}   
                       </p>
                     </div>

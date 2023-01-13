@@ -12,13 +12,10 @@
         <div class="col-md-8">
         <div class="card-body">
             <div>
-            <form method="post" enctype="multipart/form-data">
+            <form method="post">
             {% csrf_token %}
-            <p class="texto-modal">ID:</p>
-            {{ form_area.id }}  
-
             <p class="texto-modal">Nome:</p>
-            {{ form_area.nome}} 
+            {{ form_area.nome }} 
                 
             <p style="padding-top: 10px;" class="cadastro">
             <input type="submit"value="Cadastrar" class="btn btn-success cad" /></p>
