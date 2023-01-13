@@ -129,7 +129,7 @@ def editar_modalidades(request, id):
 def remover_modalidades(request, id):
     modalidade = Modalidade.objects.get(pk=id)
     modalidade.delete()
-    return redirect('listar_modalidades')
+    return redirect('modalidade')
 
 
 #CRUD Area________________________________________________________________________________________________________
@@ -145,7 +145,7 @@ def cadastrar_areas(request):
     
     if form.is_valid():
         form.save()
-        return redirect('listar_areas')
+        return redirect('area')
 
     contexto = {
         'form_area': form
@@ -159,7 +159,7 @@ def editar_areas(request, id):
    
     if form.is_valid():
         form.save()
-        return redirect('listar_areas')
+        return redirect('area')
     
     contexto = {
         'form_area': form
@@ -170,4 +170,4 @@ def editar_areas(request, id):
 def remover_areas(request, id):
     area = Area.objects.get(pk=id)
     area.delete()
-    return redirect('listar_areas')
+    return redirect('area')

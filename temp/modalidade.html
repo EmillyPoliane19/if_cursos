@@ -16,8 +16,15 @@
                     <div class="card-body">
                       <p class="card-text">
                         {% for novamodalidade in todas_modalidade %}
-                        {{novamodalidade.nome}}
+                        <p class="texto-modal">{{novamodalidade.nome}}
                         {{novamodalidade.id}}
+                        <a href="{% url 'editar_modalidades' novamodalidade.id %}">
+                          <button type="button" class="btn btn-outline-info">Editar</button>
+                        </a>
+                        <a href="{% url 'remover_modalidades' novamodalidade.id %}">
+                            <button type="button" class="btn btn-outline-danger">Remover</button>
+                        </a>
+                        </p>
                         <!-- Colocar EDITAR e REMOVER AQUI - lembrar de criar as URLs para funcionar -->
                           {% endfor %}
                       </p>

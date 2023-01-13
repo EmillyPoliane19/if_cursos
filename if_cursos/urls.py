@@ -15,23 +15,37 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from core.views import home, geral, registro, comentario, cursos, cadastro_usuario, area, listar_modalidades, filtro, cadastro_usuario, cadastro_modalidade, cadastro_area
+from core.views import editar_areas, home, geral, listar_areas, registro, comentario, cursos, cadastro_usuario, listar_modalidades, filtro, cadastro_usuario, cadastro_modalidade, cadastro_area, remover_areas, remover_modalidades, editar_modalidades
 from django.contrib.auth.views import LoginView, LogoutView
 
 urlpatterns = [
-    path('', home, name='home'),
     path('admin/', admin.site.urls),
     path('login/', LoginView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
+    
+
+    #Páginas usuario
+    path('', home, name='home'),
+    path('filtro/', filtro, name='filtro'), 
+
+    #Páginas adm
+    path('cursos/', cursos, name='cursos'),
     path('registro/', registro, name='registro'),
     path('geral/', geral, name='geral'),
     path('comentario/', comentario, name='comentario'),
-    path('cursos/', cursos, name='cursos'),
-    path('cadastro_usuario/', cadastro_usuario, name='cadastro_usuario'),
-    path('area/', area, name='area'),
-    path('filtro/', filtro, name='filtro'),
-    path('modalidade/', listar_modalidades, name='modalidade'),
+
+    #CRUD Usuario
     path('cadastro_usuario/', cadastro_usuario),
+
+    #CRUD Area
+    path('area/', listar_areas, name='area'),
+    path('cadastro_area/', cadastro_area, name='cadastro_area'),
+    path('editar_areas/<int:id>/', editar_areas, name='editar_areas'),
+    path('remover_areas/<int:id>/', remover_areas, name='remover_areas'),
+
+    #CRUD Modalidades
+    path('modalidade/', listar_modalidades, name='modalidade'),
     path('cadastro_modalidade/', cadastro_modalidade, name='cadastro_modalidade'),
-     path('cadastro_area/', cadastro_area, name='cadastro_area'),
+    path('editar_modalidades/<int:id>/', editar_modalidades, name='editar_modalidades'),
+    path('remover_modalidades/<int:id>/', remover_modalidades, name='remover_modalidades'),
 ]
