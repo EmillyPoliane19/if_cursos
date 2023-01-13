@@ -17,11 +17,13 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Página Inicial</a>
             </li>
+
+            {% if user.is_authenticated %}
             <li class="nav-item">
-              {% if user.is_authenticated %}
-              <a class="nav-link" href="#">Cadastrar</a>
-              {% endif %}
+                <a class="nav-link" href="{% url 'registro' %}">Cadastrar</a>
             </li>
+            {% endif %}
+            
             <li class="nav-item">
               {% if user.is_authenticated %}
               <a class="nav-link" href="{% url 'geral' %}">Perfil</a>
