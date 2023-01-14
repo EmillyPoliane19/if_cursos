@@ -1,3 +1,4 @@
+
 /*Navbar do site*/
 .navbar, .offcanvas-header{
     background: url("/static/imgs/poligonos.png");
@@ -5,7 +6,7 @@
 
 body {
     background-image: url("/static/imgs/fundo.png");
-    padding-top: 20px;
+    padding-top: 6px;
 }
 
 .logo_if{
@@ -28,12 +29,8 @@ body {
     margin-top: 10px;
 }
 
-.carousel-inner{
-    height: 50%;
-}
-
 footer {
-    margin-top: 1s9px;
+    clear: both;
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -41,10 +38,13 @@ footer {
     text-align: center;
     line-height: 100px;
     background: url("/static/imgs/poligonos.png");
-    margin-top: 50px;
+    margin-top: 190px;
+    
 }
 
-
+.texto-inicio{
+    position:absolute;
+}
 /*Filtro*/
 
 /*Geral*/

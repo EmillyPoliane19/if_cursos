@@ -5,26 +5,15 @@ main{
 
 /*Carousel*/
 .carousel{
-    margin-left: 360px;
-    margin-right: 360px;
-    margin-bottom: 360px;
-    margin: 0 auto; 
-    height: 850px; 
-    width: 850px;
+    position: relative;
 }
 
 .carousel-control-prev, .carousel-control-next{
-    bottom: 50%;
-}
-
-.carousel-inner{
-    width: 850px;
-    height: 850px;
-    margin-bottom: 10px;
+    bottom: 5%;
 }
 
 .carousel-indicators{
-    bottom: 40%;
+    bottom: 2%;
 }
 
  .img2, .img3{
@@ -46,14 +35,26 @@ main{
 /*Bloco dos cursos*/
 .blococurso{
     height: 400px;
-    width: 1500px;
+    width: 1200px;
     margin-left: 360px;
     margin-right: 360px;
     margin: 0 auto; 
     color: green;
     background-color: green;
     justify-content: center;
-    padding-left: 150px;
+    padding-left: 110px;
+    justify-content: center;
+    
+}
+
+.container-curso{
+    margin-top: 80px;
+}
+
+.titulo-inicio{
+    text-align: center;
+    margin: 0 auto;
+    margin-left: -450px;
     
 }
 
