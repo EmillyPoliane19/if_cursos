@@ -58,8 +58,18 @@ main{
     
 }
 
-.texto-modal{
+.texto-curso1{
+    margin-left: 20px;
     color: white;
+    font-size: 30px;
+    text-align:left;
+}
+
+.texto-curso3{
+    margin-left: 60px;
+    color: white;
+    font-size: 30px;
+    text-align:left;
 }
 
 

@@ -26,3 +26,18 @@
     color: rgb(0, 83, 0);
 }
 
+.texto-modal{
+    color: white;
+    font: size 100px;
+    text-align: left;
+    
+}
+
+.titulo-crud{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.cadastro{
+    text-align: left;
+}
