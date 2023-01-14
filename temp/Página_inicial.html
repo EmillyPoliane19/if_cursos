@@ -43,19 +43,19 @@
                     <div class="card-body">
                       <div class="row row-cols-3 blococurso2">
                       <div class="col-4">  
-                      <a class="btn botao-curso" href="{% url 'cursos' %}" role="group" style="height: 250px; width: 250px;">
+                      <a class="btn botao-curso" href="{% url 'cursos' %}" role="group" >
                         <img src="{% static 'imgs/pc_icone.png' %}" style="height: 235px; width: 220px;"></a>
                         <p class="texto-curso" style="margin-left: 20px;">INFORMÁTICA</p>
                       </div>
 
                       <div class="col-4">
-                      <a class="btn botao-curso" href="{% url 'cursos' %}" role="group" style="height: 250px; width: 250px;">
+                      <a class="btn botao-curso" href="{% url 'cursos' %}" role="group" >
                         <img src="{% static 'imgs/engrenagens_icone.png' %}" style="height:230px; width: 200px"></a>
                         <p class="texto-curso">ELETROMECÂNICA</p>
                       </div>
                       
                       <div class="col-4">
-                      <a class="btn botao-curso" href="{% url 'cursos' %}" role="group" style="height: 250px; width: 250px;">
+                      <a class="btn botao-curso" href="{% url 'cursos' %}" role="group" >
                         <img src="{% static 'imgs/balao_icone.png' %}" style="height: 230px; width: 200px; "></a>
                         <p class="texto-curso"  style="margin-left: 60px;">EVENTOS</p>
                       </div>
@@ -67,6 +67,40 @@
                 </div>
               </div>
             </div>
+
+            <div class="container-fluid container-curso">
+              <div class="row">
+                <h1 class="titulo-inicio">Cursos 2</h1>    
+                  <div class="card blococurso" >
+                  <div class="row g-0">
+                    <div class="col-md-12">
+                      <div class="card-body">
+                        <div class="row row-cols-3 blococurso2">
+                        <div class="col-4">  
+                        <a class="btn botao-curso" href="{% url 'cursos' %}" role="group" style="height: 250px; width: 250px;">
+                          </a>
+                          <p class="texto-curso" style="margin-left: 20px;">CURSO 1</p>
+                        </div>
+  
+                        <div class="col-4">
+                        <a class="btn botao-curso" href="{% url 'cursos' %}" role="group" style="height: 250px; width: 250px;">
+                          </a>
+                          <p class="texto-curso">CURSO 2</p>
+                        </div>
+                        
+                        <div class="col-4">
+                        <a class="btn botao-curso" href="{% url 'cursos' %}" role="group" style="height: 250px; width: 250px;">
+                          </a>
+                          <p class="texto-curso"  style="margin-left: 60px;">CURSO 3</p>
+                        </div>
+                    </div>
+  
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 </div>
 {% endblock %}
      
