@@ -27,10 +27,16 @@ main{
     bottom: 40%;
 }
 
-.img2, .img3{
+ .img2, .img3{
     height: 500px;
     width: 400px;
 }
+
+.img {
+    height: 500px;
+    width: 400px;   
+}
+
 
 .curso{ 
     text-align: left;
@@ -40,12 +46,15 @@ main{
 /*Bloco dos cursos*/
 .blococurso{
     height: 400px;
-    width: 1800px;
+    width: 1500px;
     margin-left: 360px;
     margin-right: 360px;
     margin: 0 auto; 
     color: green;
     background-color: green;
+    justify-content: center;
+    padding-left: 150px;
+    
 }
 
 .botao-curso{

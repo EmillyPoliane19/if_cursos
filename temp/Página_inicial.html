@@ -4,7 +4,7 @@
 
 {% block conteudo %}
 
-
+    <div class="principal">
     <!--Body da Página-->
    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
         <div class="carousel-indicators">
@@ -13,7 +13,7 @@
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-          <div class="carousel-item active" style="height: 200px; ">
+          <div class="carousel-item active">
             <img src="{% static '/imgs/ifrn.jpg' %}" class="d-block w-100 img" alt="...">
           </div>
           <div class="carousel-item active">
@@ -37,7 +37,7 @@
       <div class="container-fluid">
         <h1>Cursos regulares</h1>
             <div class="row">    
-                <div class="card blococurso" style=>
+                <div class="card blococurso" style= "justify-content: center; padding-left: 180px;">
                 <div class="row g-0">
                   <div class="col-md-12">
                     <div class="card-body">
@@ -45,7 +45,7 @@
                       <div class="col-4">  
                       <a class="btn botao-curso" href="{% url 'cursos' %}" role="group" style="height: 250px; width: 250px;">
                         <img src="{% static 'imgs/pc_icone.png' %}" style="height: 235px; width: 220px;"></a>
-                        <p class="texto-curso">INFORMÁTICA</p>
+                        <p class="texto-curso" style="margin-left: 20px;">INFORMÁTICA</p>
                       </div>
 
                       <div class="col-4">
@@ -57,7 +57,7 @@
                       <div class="col-4">
                       <a class="btn botao-curso" href="{% url 'cursos' %}" role="group" style="height: 250px; width: 250px;">
                         <img src="{% static 'imgs/balao_icone.png' %}" style="height: 230px; width: 200px; "></a>
-                        <p class="texto-curso">EVENTOS</p>
+                        <p class="texto-curso"  style="margin-left: 60px;">EVENTOS</p>
                       </div>
                   </div>
 
@@ -67,7 +67,7 @@
                 </div>
               </div>
             </div>
-
+</div>
 {% endblock %}
      
    
