@@ -63,6 +63,11 @@ body {
 .texto-inicio{
     position:absolute;
 }
+
+.titulo-curso{
+    color: rgb(0, 0, 0);
+    margin-left: -110px;
+}
 /*Filtro*/
 .div-principal{
     margin-top: 20px;
