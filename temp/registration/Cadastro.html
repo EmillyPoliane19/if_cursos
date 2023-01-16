@@ -3,9 +3,13 @@
 {% load static %}
 
 {% block conteudo %}
-<form method="post">
+<div class="container text-center">
+  <div class="row">
+    <div class="bloco-registro">
+  <h2 class="titulo-login"><b>Login de administrador</b></h2>
+  <form method="post" class="texto-login">
   {% csrf_token %}
-   <p>Matrícula: {{ form.matricula }}</p>
+  <p>Matrícula: {{ form.matricula }}</p>
   <p>Nome: {{ form.nome }}</p>
   <p>Telefone: {{ form.telefone }}</p>
   <p>Data de Nascimento: {{ form.data }}</p>
@@ -13,7 +17,9 @@
   <p>Senha: {{ form.password1 }}</p>
   <p>Repetir Senha: {{ form.password2 }}</p>
   
-  
   <input type="submit" value="Cadastrar">
 </form>
+</div>  
+</div>
+</div>
 {% endblock %}

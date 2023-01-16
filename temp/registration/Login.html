@@ -3,14 +3,19 @@
 {% load static %}
 
   {% block conteudo %}
-
-    <h2>Login</h2>
-    <form method="post">
+  <div class="container text-center">
+    <div class="row">
+      <div class="bloco-login">
+    <h2 class="titulo-login"><b>Login de administrador</b></h2>
+    <form method="post" class="texto-login">
       {% csrf_token %}
       
-      <p>Cpf: {{ form.username }}</p>
-      <p>Senha: {{ form.password }}</p>
-      <p><input type="submit" value="Autenticar" /></p>
+      <p>CPF:{{ form.username }}</p>
+      <p>SENHA:{{ form.password }}</p>
+      <input type="submit" value="Entrar" class="botão-login"/>
     </form>
+      </div>  
+    </div>
+  </div>
 
   {% endblock %}
