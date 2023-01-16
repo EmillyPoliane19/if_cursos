@@ -70,6 +70,7 @@ body {
     background-color: green;
     color: green;
     border-radius: 40px;
+    box-shadow: 10px 5px 5px rgb(134, 134, 134);
 }
 
 .b1:hover{
@@ -87,6 +88,7 @@ body {
 .c1{
     margin: 0 auto; 
     text-align: center;
+    box-shadow: 10px 5px 5px rgb(134, 134, 134);
   }
 
 h1{

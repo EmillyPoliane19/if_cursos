@@ -142,7 +142,7 @@ def listar_areas(request):
     return render(request, 'area.html', contexto)
 
 def cadastrar_areas(request):
-    form = AreaForm(request. POST or None, request.FILES or None)
+    form = AreaForm(request. POST or None)
     
     if form.is_valid():
         form.save()
