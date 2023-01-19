@@ -19,14 +19,16 @@
                       <p class="card-text">
                         {% for novaarea in todas_areas %}
                         <p class="texto-modal">
-                        Nome: {{novaarea.nome}}  {{novaarea.id}}
+                        Nome: {{novaarea.nome}}  
                         <a href="{% url 'editar_areas' novaarea.id %}">
                           <button type="button" class="btn btn-success">Editar</button>
                         </a>
-                        <a href="{% url 'remover_areas' novoarea.id %}">
+                        <a href="{% url 'remover_areas' novaarea.id %}">
                             <button type="button" class="btn btn-danger">Remover</button>
                             </a>
                           </p>
+                          {% empty %}
+                          <p class="texto-modal">Nenhuma área cadastrada</p>
                          {% endfor %}   
                       </p>
                     </div>
