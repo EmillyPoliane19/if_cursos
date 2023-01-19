@@ -10,6 +10,10 @@ from .forms import ModalidadeForm, AreaForm, UsuarioCreationForm
 def home(request):
     return render(request,'Página_inicial.html')
 
+#Página do curso__________________________________________________________________________________________________________
+def pagina_curso(request):
+    return render(request,'pagina_curso.html')
+
 #Páginas de login e logout_______________________________________________________________________________________________
 def login(request):
     return render(request,'registration/login.html')
