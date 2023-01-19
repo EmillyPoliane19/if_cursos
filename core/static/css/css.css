@@ -65,7 +65,7 @@ body {
 }
 
 .titulo-curso{
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     margin-left: -110px;
 }
 /*Filtro*/
@@ -98,6 +98,59 @@ body {
     color: white;
     font-size: 1cm;
     padding-top: 13px;
+}
+
+/*Página curso*/
+.bloco-pag-curso{
+    height: 300px;
+    width: 1200px;
+    margin-left: 360px;
+    margin-right: 360px;
+    margin: 0 auto; 
+    color: green;
+    background-color: green;
+}
+
+.titulo-topico-curso{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.titulo-topico-curso2{
+    text-align: center;
+    margin: 0 auto;
+    margin-left: -290px;
+}
+
+.bloco-pag-curso2{ 
+    height: 300px;
+    width: 1200px;
+    margin-left: 360px;
+    margin-right: 360px;
+    margin: 0 auto; 
+    color: rgb(0, 83, 0);
+    background-color: rgb(0, 83, 0);}
+
+.bloco-espaco{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.bloco-espaco2{
+    padding-top: 50px;
+}
+
+.b2{
+    background-color: green;
+    color: green;
+    border-radius: 40px;
+    margin: 0 auto;
+    margin-left: -420px;
+}
+
+.b2:hover{
+    background-color: rgb(0, 83, 0);
+    color: rgb(0, 83, 0);
 }
 
 /*Geral*/

@@ -175,13 +175,13 @@ def remover_areas(request, id):
     area.delete()
     return redirect('area')
 
-#Cursos
+#CRUD Cursos_____________________________________________________________________________________________________________
 def listar_cursos(request):
     cursos = Cursos.objects.all()
     contexto = {
         'todas_curos': cursos
     }
-    return render(request, 'curos.html', contexto)
+    return render(request, 'cursos.html', contexto)
 
 def cadastrar_cursos(request):
     form = CursoForm(request.POST or None)

@@ -1,13 +1,16 @@
-{% extends 'base2.html' %}
+{% extends 'base.html' %}
 {% load widget_tweaks %}
 {% load static %}
 
 {% block conteudo %}
 
 <div class="container-fluid">
-  <div class="row">  
-    <h1>Cadastro de cursos</h1>  
-      <div class="card c1" style=>
+  <div class="row titulo-cadastro-curso">  
+    <div class="col-6"><h1>Cadastro de cursos</h1></div>  
+    <div class="col-6"><a class="btn b2" href="{% url 'cadastrar_cursos' %}" role="button" style="height: 40px; width: 40px;">
+      <img src="{% static 'imgs/sinal de mais.png' %}" style="height: 15px; width: 15px;"></a></div>
+    </div>
+      <div class="card c1">
       <div class="row g-0">
         <div class="col-md-8">
           <div class="card-body">
@@ -31,6 +34,5 @@
       </div>
     </div>
   </div>
-</div>
 
 {% endblock %}
