@@ -1,5 +1,5 @@
 from django.forms import ModelForm
-from .models import Modalidade, Area, Usuario
+from .models import Cursos, Modalidade, Area, Usuario
 from django.contrib.auth.forms import UserCreationForm
 
 class ModalidadeForm(ModelForm):
@@ -13,6 +13,10 @@ class AreaForm(ModelForm):
         model = Area
         fields = ['nome']
 
+class CursoForm(ModelForm):
+    class Meta:
+        model = Cursos
+        fields = ['nome']
 
 class UsuarioCreationForm(UserCreationForm):
     class Meta:

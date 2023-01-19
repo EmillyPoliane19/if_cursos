@@ -16,3 +16,6 @@ class Modalidade(models.Model):
 
 class Area(models.Model):
    nome = models.CharField('Nome', max_length=100)
+
+class Cursos(models.Model):
+   nome = models.CharField('Nome', max_length=100)

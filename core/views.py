@@ -3,8 +3,8 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
-from .models import Usuario, Modalidade, Area
-from .forms import ModalidadeForm, AreaForm, UsuarioCreationForm
+from .models import Usuario, Modalidade, Area, Cursos
+from .forms import ModalidadeForm, AreaForm, CursoForm,UsuarioCreationForm
 
 #Página Inicial__________________________________________________________________________________________________________
 def home(request):
@@ -63,9 +63,7 @@ def cursos(request):
 @login_required
 def cadastro(request):
     return render(request, 'cadastro_curso.html')
-#Cadastro de area
-def cadastro_area(request):
-    return render(request, 'cadastro_area.html')
+
 
 #Páginas do site________________________________________________________________________________________________________
 #Áreas
@@ -146,7 +144,7 @@ def listar_areas(request):
     return render(request, 'area.html', contexto)
 
 def cadastrar_areas(request):
-    form = AreaForm(request. POST or None)
+    form = AreaForm(request.POST or None)
     
     if form.is_valid():
         form.save()
@@ -176,3 +174,58 @@ def remover_areas(request, id):
     area = Area.objects.get(pk=id)
     area.delete()
     return redirect('area')
+
+#Cursos
+def listar_cursos(request):
+    cursos = Cursos.objects.all()
+    contexto = {
+        'todas_curos': cursos
+    }
+    return render(request, 'curos.html', contexto)
+
+def cadastrar_cursos(request):
+    form = CursoForm(request.POST or None)
+    
+    if form.is_valid():
+        form.save()
+        return redirect('cursos')
+
+    contexto = {
+        'form_cursos': form
+    }
+    return render(request, 'cadastro_curso.html', contexto)
+
+def editar_cursos(request, id):
+    cursos = Cursos.objects.get(pk=id)
+    
+    form = CursoForm(request.POST or None, request.FILES or None ,instance=cursos)
+   
+    if form.is_valid():
+        form.save()
+        return redirect('cursos')
+    
+    contexto = {
+        'form_cursos': form
+    }
+
+    return render(request, 'cadastro_curso.html', contexto)
+
+def editar_cursos(request, id):
+    cursos = Cursos.objects.get(pk=id)
+    
+    form = CursoForm(request.POST or None, request.FILES or None ,instance=area)
+   
+    if form.is_valid():
+        form.save()
+        return redirect('cursos')
+    
+    contexto = {
+        'form_cursos': form
+    }
+
+    return render(request, 'cadastro_curso.html', contexto)
+
+def remover_cursos(request, id):
+    cursos = Cursos.objects.get(pk=id)
+    area.delete()
+    return redirect('cursos')

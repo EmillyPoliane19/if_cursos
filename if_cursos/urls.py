@@ -16,8 +16,12 @@ Including another URLconf
 from core.views import pagina_curso
 from django.contrib import admin
 from django.urls import path
-from core.views import editar_areas, home, geral, listar_areas, registro, comentario, cursos, cadastro_usuario, listar_modalidades, filtro, cadastro_usuario, cadastro_modalidade, cadastro_area, remover_areas, remover_modalidades, editar_modalidades
+from core.views import editar_areas, home, geral, listar_areas, registro
+from core.views import comentario, cursos, cadastro_usuario, listar_modalidades,listar_cursos, filtro
+from core.views import cadastro_usuario, cadastro_modalidade,cadastrar_areas,cadastrar_cursos
+from core.views import remover_areas, remover_modalidades, editar_modalidades, editar_cursos, remover_cursos
 from django.contrib.auth.views import LoginView, LogoutView
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -41,9 +45,15 @@ urlpatterns = [
 
     #CRUD Area
     path('area/', listar_areas, name='area'),
-    path('cadastro_area/', cadastro_area, name='cadastro_area'),
+    path('cadastro_area/', cadastrar_areas, name='cadastro_area'),
     path('editar_areas/<int:id>/', editar_areas, name='editar_areas'),
     path('remover_areas/<int:id>/', remover_areas, name='remover_areas'),
+
+    #CRUD Cursos
+    path ('cursos/', listar_cursos, name='cursos'),
+    path ('cadastro_cursos/', cadastrar_cursos, name='cadastrar_cursos'),
+    path ('editar_cursos/<int:id>/', editar_cursos,name='editar_cursos'),
+    path ('remover_cursos/<int:id>/', remover_cursos, name='remover_cursos'),
 
     #CRUD Modalidades
     path('modalidade/', listar_modalidades, name='modalidade'),

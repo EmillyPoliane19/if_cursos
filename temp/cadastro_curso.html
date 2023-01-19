@@ -4,21 +4,25 @@
 
 {% block conteudo %}
 
-    <div class="container-fluid">
-            <div class="row">  
-              <h1>Cadastro de cursos</h1>  
-                <div class="card c1" style=>
-                <div class="row g-0">
-                  <div class="col-md-8">
-                    <div class="card-body">
-                      <p class="card-text">
-                     
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-         </div>
+<div class="container-fluid">
+  <div class="row">   
+      <h1 class="titulo-crud">Cadastro de Cursos</h1> 
+      <div class="card c1">
+      <div class="col-md-8">
+      <div class="card-body">
+          <div>
+          <form method="post">
+          {% csrf_token %}
+          <p class="texto-modal">NOME: {{ form_cursos.nome }} </p>
+              
+          <p style="padding-top: 10px;" class="cadastro">
+          <input type="submit"value="Cadastrar" class="btn btn-success cad" /></p>
+          </form>
+          </div>
+          </div>
+      </div>
+      </div>
+      </div>
+      </div>
     
 {% endblock %}
