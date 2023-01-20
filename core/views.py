@@ -56,13 +56,13 @@ def geral(request):
 def comentario(request):
     return render(request, 'comentarios.html')
 #Cursos
-@login_required
-def cursos(request):
-    return render(request, 'cursos.html')
+#@login_required
+#def cursos(request):
+   # return render(request, 'cursos.html')
 #Cadastro de curso
-@login_required
+#@login_required
 def cadastro(request):
-    return render(request, 'cadastro_curso.html')
+  return render(request, 'cadastro_curso.html')
 
 
 #Páginas do site________________________________________________________________________________________________________
@@ -179,7 +179,7 @@ def remover_areas(request, id):
 def listar_cursos(request):
     cursos = Cursos.objects.all()
     contexto = {
-        'todas_curos': cursos
+        'todos_cursos': cursos
     }
     return render(request, 'cursos.html', contexto)
 
@@ -213,7 +213,7 @@ def editar_cursos(request, id):
 def editar_cursos(request, id):
     cursos = Cursos.objects.get(pk=id)
     
-    form = CursoForm(request.POST or None, request.FILES or None ,instance=area)
+    form = CursoForm(request.POST or None, request.FILES or None ,instance=cursos)
    
     if form.is_valid():
         form.save()
@@ -227,5 +227,5 @@ def editar_cursos(request, id):
 
 def remover_cursos(request, id):
     cursos = Cursos.objects.get(pk=id)
-    area.delete()
+    cursos.delete()
     return redirect('cursos')

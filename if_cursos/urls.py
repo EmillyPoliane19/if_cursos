@@ -17,7 +17,7 @@ from core.views import pagina_curso
 from django.contrib import admin
 from django.urls import path
 from core.views import editar_areas, home, geral, listar_areas, registro
-from core.views import comentario, cursos, cadastro_usuario, listar_modalidades,listar_cursos, filtro
+from core.views import comentario, cadastro_usuario, listar_modalidades,listar_cursos, filtro
 from core.views import cadastro_usuario, cadastro_modalidade,cadastrar_areas,cadastrar_cursos
 from core.views import remover_areas, remover_modalidades, editar_modalidades, editar_cursos, remover_cursos
 from django.contrib.auth.views import LoginView, LogoutView
@@ -35,7 +35,7 @@ urlpatterns = [
     path('pagina_curso/', pagina_curso, name='pagina_curso'),
 
     #Páginas adm
-    path('cursos/', cursos, name='cursos'),
+    #path('cursos/', cursos, name='cursos'),
     path('registro/', registro, name='registro'),
     path('geral/', geral, name='geral'),
     path('comentario/', comentario, name='comentario'),
