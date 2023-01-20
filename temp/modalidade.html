@@ -4,10 +4,9 @@
 
 {% block conteudo %}
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-6"><h1>Modalidades</h1></div>
-        <div class="col-6"><a class="btn b2" href="{% url 'cadastro_modalidade' %}" role="button" style="height: 40px; width: 40px;">
-          <img src="{% static 'imgs/sinal de mais.png' %}" style="height: 15px; width: 15px;"></a></div>
+      <div class="row bloco-titulo-curso">
+       <h1 class=" titulo-cadastro-curso">Modalidades cadastradas</h1>
+       <a class="btn b2 botao-curso" href="{% url 'cadastro_modalidade' %}" role="button" style="height: 40px; width: 250px;"><p class="texto-botao">Cadastrar nova modalidade</p></a>
       </div>
             <div class="row">    
                 <div class="card c1" style=>
@@ -19,10 +18,10 @@
                         <p class="texto-modal">{{novamodalidade.nome}}
                         {{novamodalidade.id}}
                         <a href="{% url 'editar_modalidades' novamodalidade.id %}">
-                          <button type="button" class="btn btn-outline-info">Editar</button>
+                          <button type="button" class="btn btn-success">Editar</button>
                         </a>
                         <a href="{% url 'remover_modalidades' novamodalidade.id %}">
-                            <button type="button" class="btn btn-outline-danger">Remover</button>
+                            <button type="button" class="btn btn-danger">Remover</button>
                         </a>
                         </p>
                         <!-- Colocar EDITAR e REMOVER AQUI - lembrar de criar as URLs para funcionar -->

@@ -87,10 +87,21 @@
 
 /*Cadastro curso*/
 .titulo-cadastro-curso{
-    margin-left: 8px;
+    margin: auto;
 }
 
 .botao-curso{ 
-    margin-left: 700px;
     margin: auto;
+}
+
+.botao-curso{
+    color:white;
+}
+
+.botao-curso:hover{
+    color: white;
+}
+
+.bloco-titulo-curso{
+    padding-bottom: 16px;
 }
