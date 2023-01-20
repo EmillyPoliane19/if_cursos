@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'styles\base.html' %}
 {% load widget_tweaks %}
 {% load static %}
 
@@ -10,9 +10,21 @@
         <div class="col-4 bloco1">
             <div>
                 <p class="texto-filtro">Filtros</p>
+                <form method="post">
+                    {% csrf_token %}
+                    <p style="color: white">Palavra-chave:</p>
+                    <p><input type="text" name="palavra" value="{{palavra}}" /></p>
+                    <p><input type="submit" value="Buscar" />
+                </form>
             </div>
         </div>
-        <div class="col-8 bloco2">col-4</div>
+        <div class="col-8 bloco2">
+            {% for curso in listar_cursos %}
+            <p style="color: white">Nome: {{curso.nome}}</p>
+            {% empty %}
+            <p>Nenhum curso encontrado</p>
+            {% endfor %}
+        </div>
       </div>
     </div>
 

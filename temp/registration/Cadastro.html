@@ -1,4 +1,4 @@
-{% extends 'base2.html' %} 
+{% extends 'styles\base2.html' %} 
 {% load widget_tweaks %}
 {% load static %}
 
@@ -6,7 +6,7 @@
 <div class="container text-center">
   <div class="row">
     <div class="bloco-registro">
-  <h2 class="titulo-login"><b>Login de administrador</b></h2>
+  <h2 class="titulo-login"><b>Cadastro do administrador</b></h2>
   <form method="post" class="texto-login">
   {% csrf_token %}
   <p>Matrícula: {{ form.matricula }}</p>

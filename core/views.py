@@ -33,7 +33,7 @@ def autenticar(request):
         else:
             return redirect('login')
     else:
-        return render(request, 'registration\login.html')
+        return render(request, 'registration/login.html')
 
 #Página de Cadastro________________________________________________________________________________________________________
 def registro(request):
@@ -50,7 +50,7 @@ def registro(request):
 #Geral
 @login_required
 def geral(request):
-    return render(request,'registration\geral.html') 
+    return render(request,'registration/geral.html') 
 #Comentários
 @login_required
 def comentario(request):
@@ -62,19 +62,32 @@ def comentario(request):
 #Cadastro de curso
 #@login_required
 def cadastro(request):
-  return render(request, 'cadastro_curso.html')
+  return render(request, 'curso/cadastro_curso.html')
 
 
 #Páginas do site________________________________________________________________________________________________________
 #Áreas
 def area(request):
-    return render (request, 'area.html')
+    return render (request, 'areas/area.html')
 #Modalidades
 def modalidade(request):
-    return render (request, 'modalidade.html')
+    return render (request, 'modalidades/modalidade.html')
 #fitros
 def filtro(request):
-    return render(request,'Filtro_cursos.html')
+    listar_cursos = Cursos.objects.all()
+    listar_areas = Area.objects.all()
+    palavra = ''
+    if request.POST:
+        palavra = request.POST['palavra']
+        listar_cursos = Cursos.objects.filter(nome__contains = palavra)
+    
+    contexto = {
+        'listar_cursos': listar_cursos,
+        'palavra': palavra,
+        'listar_areas': listar_areas
+    }
+
+    return render(request,'Filtro_cursos.html', contexto)
 
 
 #Usuário________________________________________________________________________________________________________
@@ -100,7 +113,7 @@ def listar_modalidades(request):
     contexto = {
         'todas_modalidade': modalidade
     }
-    return render(request, 'modalidade.html', contexto)
+    return render(request, 'modalidades/modalidade.html', contexto)
 
 def cadastro_modalidade(request):
     form = ModalidadeForm(request. POST or None)
@@ -112,7 +125,7 @@ def cadastro_modalidade(request):
     contexto = {
         'form_modalidade': form
     }
-    return render(request, 'cadastro_modalidade.html', contexto)
+    return render(request, 'modalidades/cadastro_modalidade.html', contexto)
 
 def editar_modalidades(request, id):
     modalidade = Modalidade.objects.get(pk=id)
@@ -127,7 +140,7 @@ def editar_modalidades(request, id):
         'form_modalidade': form
     }
 
-    return render(request, 'cadastro_modalidade.html', contexto)
+    return render(request, 'modalidades/cadastro_modalidade.html', contexto)
 
 def remover_modalidades(request, id):
     modalidade = Modalidade.objects.get(pk=id)
@@ -141,7 +154,7 @@ def listar_areas(request):
     contexto = {
         'todas_areas': area
     }
-    return render(request, 'area.html', contexto)
+    return render(request, 'areas/area.html', contexto)
 
 def cadastrar_areas(request):
     form = AreaForm(request.POST or None)
@@ -153,7 +166,7 @@ def cadastrar_areas(request):
     contexto = {
         'form_area': form
     }
-    return render(request, 'cadastro_area.html', contexto)
+    return render(request, 'areas/cadastro_area.html', contexto)
 
 def editar_areas(request, id):
     area = Area.objects.get(pk=id)
@@ -168,7 +181,7 @@ def editar_areas(request, id):
         'form_area': form
     }
 
-    return render(request, 'cadastro_area.html', contexto)
+    return render(request, 'areas/cadastro_area.html', contexto)
 
 def remover_areas(request, id):
     area = Area.objects.get(pk=id)
@@ -181,7 +194,7 @@ def listar_cursos(request):
     contexto = {
         'todos_cursos': cursos
     }
-    return render(request, 'cursos.html', contexto)
+    return render(request, 'curso/cursos.html', contexto)
 
 def cadastrar_cursos(request):
     form = CursoForm(request.POST or None)
@@ -193,7 +206,7 @@ def cadastrar_cursos(request):
     contexto = {
         'form_cursos': form
     }
-    return render(request, 'cadastro_curso.html', contexto)
+    return render(request, 'curso/cadastro_curso.html', contexto)
 
 def editar_cursos(request, id):
     cursos = Cursos.objects.get(pk=id)
@@ -208,22 +221,7 @@ def editar_cursos(request, id):
         'form_cursos': form
     }
 
-    return render(request, 'cadastro_curso.html', contexto)
-
-def editar_cursos(request, id):
-    cursos = Cursos.objects.get(pk=id)
-    
-    form = CursoForm(request.POST or None, request.FILES or None ,instance=cursos)
-   
-    if form.is_valid():
-        form.save()
-        return redirect('cursos')
-    
-    contexto = {
-        'form_cursos': form
-    }
-
-    return render(request, 'cadastro_curso.html', contexto)
+    return render(request, 'curso/cadastro_curso.html', contexto)
 
 def remover_cursos(request, id):
     cursos = Cursos.objects.get(pk=id)
