@@ -14,6 +14,7 @@
           <form method="post">
           {% csrf_token %}
           <p class="texto-modal">NOME: {{ form_cursos.nome }} </p>
+          <p class="texto-modal">Area: {{ form_cursos.area }} </p>
               
           <p style="padding-top: 10px;" class="cadastro">
           <input type="submit"value="Cadastrar" class="btn btn-success cad" /></p>

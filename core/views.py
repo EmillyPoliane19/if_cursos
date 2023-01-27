@@ -77,14 +77,20 @@ def filtro(request):
     listar_cursos = Cursos.objects.all()
     listar_areas = Area.objects.all()
     palavra = ''
+    areas_selecionadas = []
     if request.POST:
         palavra = request.POST['palavra']
-        listar_cursos = Cursos.objects.filter(nome__contains = palavra)
+        if request.POST.get('area_selecao', None):
+            areas_selecionadas = request.POST.getlist('area_selecao')
+            listar_cursos = Cursos.objects.filter(nome__contains = palavra).filter(area__id__in = areas_selecionadas)
+        else:
+            listar_cursos = Cursos.objects.filter(nome__contains = palavra)
     
     contexto = {
         'listar_cursos': listar_cursos,
         'palavra': palavra,
-        'listar_areas': listar_areas
+        'listar_areas': listar_areas,
+        'areas_selecionadas': areas_selecionadas
     }
 
     return render(request,'Filtro_cursos.html', contexto)

@@ -6,21 +6,38 @@
 <div class="div-principal"> 
     <h1 class="titulo-filtro">CURSOS</h1>
     <div class="container text-center">
-    <div class="row">
+    <div class="row filtro">
         <div class="col-md-4 col-sm-12 bloco1">
             <div>
                 <p class="texto-filtro">Filtros</p>
                 <form method="post">
                     {% csrf_token %}
-                    <p style="color: white">Palavra-chave:</p>
+                    <p>Palavra-chave:</p>
                     <p><input type="text" name="palavra" value="{{palavra}}" /></p>
+                    {% for novaarea in listar_areas %}
+                    
+                    <input type="checkbox" name="area_selecao" value="{{novaarea.id}}" 
+
+                    {% for area in areas_selecionadas %}
+                        {% if novaarea.id|stringformat:"i" == area %}
+                        checked
+                        {% endif %}
+                    {% endfor%}
+
+                    />{{novaarea.nome}}  
+                
+                      {% empty %}
+                    Nenhuma área cadastrada
+                     {% endfor %}   
+
                     <p><input type="submit" value="Buscar" />
+
                 </form>
             </div>
         </div>
         <div class="col-md-8 col-sm-12 bloco2">
             {% for curso in listar_cursos %}
-            <p style="color: white">Nome: {{curso.nome}}</p>
+            <p>Nome: {{curso.nome}}</p>
             {% empty %}
             <p>Nenhum curso encontrado</p>
             {% endfor %}

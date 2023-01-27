@@ -69,14 +69,18 @@ body {
     margin-left: -110px;
 }
 /*Filtro*/
+.titulo-filtro{
+    color: #000;
+}
 .div-principal{
-    margin-top: 20px;
+    margin-top: 20px; 
+    color: #ffff;
 }
 
 .bloco1{
     height: 500px;
     width: 280px; 
-    color:rgb(0, 56, 0);
+    color: #ffff;
     background-color: rgb(0, 56, 0);
     margin-right: 50px;
     box-shadow: 10px 5px 5px rgb(134, 134, 134);
@@ -85,7 +89,7 @@ body {
 .bloco2{
     height: 500px;
     width: 800px; 
-    color: rgb(0, 56, 0);
+    color: #ffff;
     background-color: rgb(0, 56, 0);    
     box-shadow: 10px 5px 5px rgb(134, 134, 134);
 }
@@ -114,12 +118,14 @@ body {
 .titulo-topico-curso{
     text-align: center;
     margin: 0 auto;
+    
 }
 
 .titulo-topico-curso2{
     text-align: center;
     margin: 0 auto;
     margin-left: -290px;
+    color: #000;
 }
 
 .bloco-pag-curso2{ 
