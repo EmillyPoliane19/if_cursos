@@ -7,7 +7,7 @@
 
     <div class="container-fluid">
       <div class="row bloco-titulo-curso">
-        <h1 class=" titulo-cadastro-curso">Áreas cadastradas</h1> 
+        <h1 class=" titulo-cadastro-curso"><b>Áreas Cadastradas</b></h1> 
         <a class="btn b2 botao-curso" href="{% url 'cadastro_area' %}" role="button" style="height: 40px; width: 250px;"><p>Cadastrar nova área</p></a>
       </div>
             <div class="row">    
@@ -27,7 +27,10 @@
                             </a>
                           </p>
                           {% empty %}
-                          <p class="texto-modal">Nenhuma área cadastrada</p>
+
+                          <div class="alert alert-danger alerta" role="alert">
+                            Não Existem Áreas Cadastradas!
+                          </div>
                          {% endfor %}   
                       </p>
                     </div>

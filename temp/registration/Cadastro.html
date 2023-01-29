@@ -3,23 +3,42 @@
 {% load static %}
 
 {% block conteudo %}
-<div class="container text-center">
-  <div class="row">
-    <div class="bloco-registro">
-  <h2 class="titulo-login"><b>Cadastro do administrador</b></h2>
-  <form method="post" class="texto-login">
-  {% csrf_token %}
-  <p>Matrícula: {{ form.matricula }}</p>
-  <p>Nome: {{ form.nome }}</p>
-  <p>Telefone: {{ form.telefone }}</p>
-  <p>Data de Nascimento: {{ form.data }}</p>
-  <p>CPF: {{ form.cpf }}</p>
-  <p>Senha: {{ form.password1 }}</p>
-  <p>Repetir Senha: {{ form.password2 }}</p>
-  
-  <input type="submit" value="Cadastrar" class="botão-login-registro">
-</form>
-</div>  
-</div>
-</div>
+  <div class="container text-center">
+    <div class="row">
+      <div class="bloco-registro">
+            <h2 class="titulo-cadastro"><b>Cadastro do administrador</b></h2>
+            <form method="post" class="texto-cadastro">
+            {% csrf_token %}
+            <div class="registro">
+              <div class='input-box'>
+                <label for="nome">Nome</label>
+                <input id="nome" type="text" placeholder="Bruno" name="nome" required>
+              </div>
+              <div class='input-box'>
+                <label for="cpf">CPF</label>
+                <input id="cpf" type="text" placeholder="000.000.000-00" name="cpf" required>
+              </div>
+              <div class='input-box'>
+                <label for="data">Nascimento</label>
+                <input id="data" type="text" placeholder="00/00/0000" name="data" required>
+              </div>
+              <div class='input-box'>
+                <label for="telefone">Telefone</label>
+                <input id="telefone" type="text" placeholder="(00) 00000-0000" name="telefone" required>
+              </div>
+              <div class='input-box'>
+                <label for="password1">Senha</label>
+                <input id="password1" type="text" placeholder="********" name="password1" required>
+              </div>
+              <div class='input-box'>
+                <label for="password2">Repetir Senha</label>
+                <input id="password2" type="text" placeholder="********" name="password2" required>
+              </div>
+            </div>
+            <input type="submit" value="Cadastrar" class="botão-login-registro">
+            </form>
+      </div>
+      </div>  
+    </div>
+  </div>
 {% endblock %}

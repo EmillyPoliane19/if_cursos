@@ -11,6 +11,16 @@ body {
 
 .logo_if{
     border-radius: 15px;
+    width: 300px; 
+    height: 80px;
+}
+.seta{
+    border-radius: 50px;
+    width: 60px; 
+    height: 60px;
+}
+.navbar-brand{
+    color: #ffff;
 }
 .navbar-toggler {
     color:#aa3b3d;
@@ -96,6 +106,7 @@ body {
 
 .titulo-filtro{
     text-align: center;
+    padding-left: 50px;
 }
 
 .texto-filtro{

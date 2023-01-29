@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 
 class Usuario(AbstractUser):
-    nome = models.CharField('Nome', max_length=100)
+    nome = models.CharField('Nome', max_length=100) 
     data = models.DateField('Data de nascimento')
     cpf = models.CharField('CPF', max_length=11, unique=True) 
     telefone = models.CharField('Telefone', max_length=11)
@@ -22,4 +22,7 @@ class Area(models.Model):
 
 class Cursos(models.Model):
    nome = models.CharField('Nome', max_length=100)
+   duracao = models.CharField('Duração',max_length=5)
+   carghor = models.CharField('Carga Horária',max_length=5)
+   modalidade = models.ForeignKey(Modalidade,on_delete=models.PROTECT)
    area = models.ForeignKey(Area,on_delete=models.PROTECT)

@@ -5,7 +5,7 @@
 {% block conteudo %}
     <div class="container-fluid">
       <div class="row bloco-titulo-curso">
-       <h1 class=" titulo-cadastro-curso">Modalidades cadastradas</h1>
+       <h1 class=" titulo-cadastro-curso"><b>Modalidades Cadastradas</b></h1>
        <a class="btn b2 botao-curso" href="{% url 'cadastro_modalidade' %}" role="button" style="height: 40px; width: 250px;"><p class="texto-botao">Cadastrar nova modalidade</p></a>
       </div>
             <div class="row">    
@@ -16,7 +16,6 @@
                       <p class="card-text">
                         {% for novamodalidade in todas_modalidade %}
                         <p class="texto-modal">{{novamodalidade.nome}}
-                        {{novamodalidade.id}}
                         <a href="{% url 'editar_modalidades' novamodalidade.id %}">
                           <button type="button" class="btn btn-success">Editar</button>
                         </a>
@@ -24,8 +23,11 @@
                             <button type="button" class="btn btn-danger">Remover</button>
                         </a>
                         </p>
-                        <!-- Colocar EDITAR e REMOVER AQUI - lembrar de criar as URLs para funcionar -->
-                          {% endfor %}
+                        {% empty %}
+                        <div class="alert alert-danger" role="alert">
+                          Não Existem Modalidades Cadastradas!
+                        </div>
+                        {% endfor %}
                       </p>
                     </div>
                   </div>

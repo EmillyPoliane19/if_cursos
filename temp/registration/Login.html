@@ -9,9 +9,16 @@
     <h2 class="titulo-login"><b>Login de administrador</b></h2>
     <form method="post" class="texto-login">
       {% csrf_token %}
-      
-      <p>CPF: {{ form.username }}</p>
-      <p>SENHA: {{ form.password }}</p>
+      <div class="login">
+        <div class='input-box'>
+          <label for="nome">CPF</label>
+          <input id="nome" type="text" placeholder="000.000.000-00" name="username" required>
+        </div> 
+        <div class='input-box'>
+          <label for="password">Senha</label>
+          <input id="password" type="text" placeholder="********" name="password" required>
+        </div>
+      </div>
       <input type="submit" value="Entrar" class="botão-login-registro"/>
     </form>
       </div>  

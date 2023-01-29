@@ -16,7 +16,7 @@ class AreaForm(ModelForm):
 class CursoForm(ModelForm):
     class Meta:
         model = Cursos
-        fields = ['nome','area']
+        fields = ['nome','modalidade','area','duracao','carghor']
 
 class UsuarioCreationForm(UserCreationForm):
     class Meta:
