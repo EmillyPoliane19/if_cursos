@@ -55,10 +55,8 @@ def geral(request):
 @login_required
 def comentario(request):
     return render(request, 'comentarios.html')
-#Cursos
-#@login_required
-#def cursos(request):
-   # return render(request, 'cursos.html')
+
+
 #Cadastro de curso
 #@login_required
 def cadastro(request):

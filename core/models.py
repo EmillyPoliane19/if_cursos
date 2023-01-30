@@ -13,6 +13,8 @@ class Usuario(AbstractUser):
 
 class Modalidade(models.Model):
    nome = models.CharField('Nome', max_length=100)
+   def __str__(self):
+      return self.nome
 
 class Area(models.Model):
    nome = models.CharField('Nome', max_length=100)

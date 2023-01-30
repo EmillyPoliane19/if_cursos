@@ -12,27 +12,31 @@
             <div class="registro">
               <div class='input-box'>
                 <label for="nome">Nome</label>
-                <input id="nome" type="text" placeholder="Bruno" name="nome" required>
+                {% render_field form.nome class="input"% id="nome" placeholder="Bruno" value="" %}
               </div>
               <div class='input-box'>
                 <label for="cpf">CPF</label>
-                <input id="cpf" type="text" placeholder="000.000.000-00" name="cpf" required>
+                {% render_field form.cpf class="input"% id="cpf" placeholder="000.000.000-00" value="" %}
               </div>
               <div class='input-box'>
                 <label for="data">Nascimento</label>
-                <input id="data" type="text" placeholder="00/00/0000" name="data" required>
+                {% render_field form.data class="input"% id="data" placeholder="00/00/0000" value="" %}
               </div>
               <div class='input-box'>
                 <label for="telefone">Telefone</label>
-                <input id="telefone" type="text" placeholder="(00) 00000-0000" name="telefone" required>
+                {% render_field form.telefone class="input"% id="telefone" placeholder="(00) 00000-0000" value="" %}
+              </div>
+              <div class='input-box'>
+                <label for="Matricula">Matricula</label>
+                {% render_field form.matricula class="input"% id="Matricula" placeholder="000.000.000-00" value="" %}
               </div>
               <div class='input-box'>
                 <label for="password1">Senha</label>
-                <input id="password1" type="text" placeholder="********" name="password1" required>
+                {% render_field form.password1 class="input"% id="password1" placeholder="********" value=""%}
               </div>
               <div class='input-box'>
                 <label for="password2">Repetir Senha</label>
-                <input id="password2" type="text" placeholder="********" name="password2" required>
+                {% render_field form.password2 class="input"% id="password2" placeholder="********" value=""%}
               </div>
             </div>
             <input type="submit" value="Cadastrar" class="botão-login-registro">

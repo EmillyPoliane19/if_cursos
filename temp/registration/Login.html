@@ -12,11 +12,11 @@
       <div class="login">
         <div class='input-box'>
           <label for="nome">CPF</label>
-          <input id="nome" type="text" placeholder="000.000.000-00" name="username" required>
+          {% render_field form.username class="input"% id="cpf" placeholder="000.000.000-00" value="" %}
         </div> 
         <div class='input-box'>
           <label for="password">Senha</label>
-          <input id="password" type="text" placeholder="********" name="password" required>
+          {% render_field form.password class="input"% id="password" placeholder="********" value=""%}
         </div>
       </div>
       <input type="submit" value="Entrar" class="botão-login-registro"/>
