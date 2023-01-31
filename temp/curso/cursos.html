@@ -5,37 +5,54 @@
 {% block conteudo %}
 
 <div class="container-fluid">
-  <div class="row bloco-titulo-curso">  
-    <h1 class=" titulo-cadastro-curso"><b>Cursos Cadastrados</b></h1> 
-    <a class=" btn b2 botao-curso" href="{% url 'cadastrar_cursos' %}" role="button" style="height: 40px; width: 250px;"><p class="texto-botao">Cadastrar novo curso</p></a>
+    <div class="row bloco-titulo-curso">  
+      <h1 class=" titulo-cadastro-curso"><b>Cursos Cadastrados</b></h1> 
+      <a class=" btn b2 botao-curso" href="{% url 'cadastrar_cursos' %}" role="button" style="height: 40px; width: 250px;"><p class="texto-botao">Cadastrar novo curso</p></a>
     </div>
       <div class="card c1">
       <div class="row g-0">
-        <div class="col-md-8">
           <div class="card-body">
-            <p class="card-text">
-              {% for novoscursos in todos_cursos %}
-              <p class="texto-modal">
-              Nome: {{novoscursos.nome}}  
-              Duração: {{novoscursos.duracao}}
-              Modalidade: {{novoscursos.modalidade}}
-              <a href="{% url 'editar_cursos' novoscursos.id %}">
-                <button type="button" class="btn btn-success">Editar</button>
-              </a>
-              <a href="{% url 'remover_cursos' novoscursos.id %}">
-                  <button type="button" class="btn btn-danger">Remover</button>
-                  </a>
-                </p>
-              {% empty %}
-                <div class="alert alert-danger" role="alert">
-                  Não Existem Cursos Cadastrados!
-                </div>
-              {% endfor %}   
-            </p>
+              <table class="table table-success table-striped" border="2">                
+                <thead>                  
+                    <tr>
+                        <th>Nome</th>
+                        <th>Duração</th>
+                        <th>Carga Horária</th>
+                        <th>Área</th>
+                        <th>Modalidade</th>
+                        <th colspan="2">Actions</th>
+                        <th></th>
+                    </tr>
+
+                </thead>
+                <tbody class="table-active">
+                    {% for novoscursos in todos_cursos %}
+                    <tr>
+                      <td>{{ novoscursos.nome }}</td>
+                      <td>{{ novoscursos.duracao }}</td>
+                      <td>{{ novoscursos.carghor }}</td>
+                      <td>{{ novoscursos.modalidade }}</td>
+                      <td>{{ novoscursos.area }}</td>
+                        <td><a href="{% url 'editar_cursos' novoscursos.id %}"><button type="button" class="btn btn-success">Editar</button></td></a>
+                        <td><a href="{% url 'remover_cursos' novoscursos.id %}"><button type="button" class="btn btn-danger">Remover</button></td></a>
+                        <td>
+                          {% empty %}
+                          <div class="col-md-7">
+                          <div class="alert alert-danger alerta" role="alert">Não Existem Cursos Cadastrados!</div>
+                          </div>
+                        </td>
+                    </tr>
+                     {% endfor %} 
+                        
+                </tbody> 
+              </table>
+                
           </div>
         </div>
       </div>
-    </div>
+
+   
+      </div>
   </div>
 
 {% endblock %}
