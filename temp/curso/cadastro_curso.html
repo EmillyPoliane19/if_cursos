@@ -10,24 +10,43 @@
       <div class="card c1">
       <div class="col-md-8">
       <div class="card-body">
-          <div>
-          <form method="post">
-          {% csrf_token %}
-          <p class="texto-modal">NOME:          {{ form_cursos.nome }} </p>
-          <p class="texto-modal">Area:          {{ form_cursos.area }} </p>
-          <p class="texto-modal">Modalidade:    {{ form_cursos.modalidade }} </p>
-          <p class="texto-modal">Duração:       {{ form_cursos.duracao }} </p>
-          <p class="texto-modal">Carga Horária: {{ form_cursos.carghor }} </p>
-
-         
-          <p style="padding-top: 10px;" class="cadastro">
-          <input type="submit"value="Cadastrar" class="btn btn-success cad" /></p>
-          </form>
-          </div>
-          </div>
-      </div>
-      </div>
-      </div>
-      </div>
+            <div class="container_curso">
+                <form method="post">
+                  {% csrf_token %}
+                <div class="row">
+                    
+                  <div class="col">
+                    <p class="texto-modal">Nome:  </br> {{ form_cursos.nome }}</p>
+                  </div>
+                  <div class="col">
+                    <p class="texto-modal">Área:  </br> {{ form_cursos.area }}</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <p class="texto-modal">Modalidade: </br>  {{ form_cursos.modalidade }}</p>
+                  </div>
+                  <div class="col">
+                    <p class="texto-modal">Duração: </br>  {{ form_cursos.duracao }}</p> 
+                  </div>
+                </div>
+                
+                  <div>
+                    <p class="texto-modal">Carga Horária: </br>   {{ form_cursos.carghor }} </p>
+                  </div>
+                  <div>
+                    <div class>
+                     <p style="padding-top: 10px;" class="cadastro">
+                     <input type="submit"value="Cadastrar" class="btn btn-success cad" /></p>   
+                    </div>
+                  </div>
+                </div>
+                </form>
+            </div>
+        </div>
+        </div>
+        </div>
+    </div>
+</div>
     
 {% endblock %}
