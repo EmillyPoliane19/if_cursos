@@ -37,22 +37,14 @@
                         <td><a href="{% url 'remover_cursos' novoscursos.id %}"><button type="button" class="btn btn-danger">Remover</button></td></a>
                         <td>
                           {% empty %}
-                          <div class="col-md-7">
-                          <div class="alert alert-danger alerta" role="alert">Não Existem Cursos Cadastrados!</div>
-                          </div>
+                            <div class="alert alert-danger alerta" role="alert">Não Existem Cursos Cadastrados!</div>                         
                         </td>
                     </tr>
-                     {% endfor %} 
-                        
+                     {% endfor %}     
                 </tbody> 
-              </table>
-                
+              </table>   
           </div>
         </div>
       </div>
-
-   
-      </div>
-  </div>
-
+</div>
 {% endblock %}
