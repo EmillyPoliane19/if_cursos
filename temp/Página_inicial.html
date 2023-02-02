@@ -4,105 +4,113 @@
 
 {% block conteudo %}
 
-    <div class="principal">
-    <!--Body da Página-->
-   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active passador" aria-current="false" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="{% static '/imgs/ifrn.jpg' %}" class="d-block w-100 img" alt="...">
-          </div>
-          <div class="carousel-item active">
-            <img src="{% static '/imgs/alunos.jpg' %}" class="d-block w-100 img2" alt="...">
-          </div>
-          <div class="carousel-item active">
-            <img src="{% static '/imgs/campus.jpg' %}" class="d-block w-100 img3" alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+<div class="principal">
+  <!--Body da Página-->
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active passador"
+        aria-current="false" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static '/imgs/ifrn.jpg' %}" class="d-block w-100 img" alt="...">
       </div>
+      <div class="carousel-item active">
+        <img src="{% static '/imgs/alunos.jpg' %}" class="d-block w-100 img2" alt="...">
+      </div>
+      <div class="carousel-item active">
+        <img src="{% static '/imgs/campus.jpg' %}" class="d-block w-100 img3" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
 
-      <div class="container-fluid container-curso">
-            <div class="row">
-              <h1 class="titulo-inicio">Cursos regulares</h1>    
-                <div class="card blococurso" >
-                <div class="row g-0">
-                  <div class="col-md-12">
-                    <div class="card-body">
-                      <div class="titulo-curso"><h2>Técnico integrado</h2></div>
-                      <div class="row row-cols-3 blococurso2">
-                        <div class="col-md-4 col-sm-12">
-                          <a class="btn botao-curso" href="{% url 'pagina_curso' %}" role="group" >
-                            <img src="{% static 'imgs/balao_icone.png' %}" style="height: 230px; width: 200px; "></a>
-                            <p class="texto-curso3" >EVENTOS</p>
-                          </div>
-
-                        <div class="col-md-4 col-sm-12">
-                            <a class="btn botao-curso" href="{% url 'pagina_curso' %}" role="group" >
-                              <img src="{% static 'imgs/engrenagens_icone.png' %}" style="height:230px; width: 200px"></a>
-                              <p class="texto-curso">ELETROMECÂNICA</p>
-                        </div>
-                      <div class="col-md-4 col-sm-12">  
-                      <a class="btn botao-curso" href="{% url 'pagina_curso' %}" role="group" >
-                        <img src="{% static 'imgs/pc_icone.png' %}" style="height: 235px; width: 220px;"></a>
-                        <p class="texto-curso1">INFORMÁTICA</p>
-                      </div>
-                           
-                  </div>
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
+  <div class="container-fluid container-curso">
+    <div class="row">
+      <h1 class="titulo-inicio">Cursos regulares</h1>
+      <div class="card blococurso">
+        <div class="row g-0">
+          <div class="col-md-12">
+            <div class="card-body">
+              <div class="titulo-curso">
+                <h2>Técnico integrado</h2>
               </div>
+              <div class="row row-cols-3 blococurso2">
+                <div class="col-md-4 col-sm-12">
+                  <a class="btn botao-curso" href="{% url 'pagina_curso' %}" role="group">
+                    <img src="{% static 'imgs/balao_icone.png' %}" style="height: 230px; width: 200px; "></a>
+                  <p class="texto-curso3">EVENTOS</p>
+                </div>
+
+                <div class="col-md-4 col-sm-12">
+                  <a class="btn botao-curso" href="{% url 'pagina_curso' %}" role="group">
+                    <img src="{% static 'imgs/engrenagens_icone.png' %}" style="height:230px; width: 200px"></a>
+                  <p class="texto-curso">ELETROMECÂNICA</p>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                  <a class="btn botao-curso" href="{% url 'pagina_curso' %}" role="group">
+                    <img src="{% static 'imgs/pc_icone.png' %}" style="height: 235px; width: 220px;"></a>
+                  <p class="texto-curso1">INFORMÁTICA</p>
+                </div>
+
+              </div>
+
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-            <div class="container-fluid container-curso">
-              <div class="row">
-                <h1 class="titulo-inicio">Cursos 2</h1>    
-                  <div class="card blococurso" >
-                  <div class="row g-0">
-                    <div class="col-md-12">
-                      <div class="card-body">
-                        <div class="row row-cols-3 blococurso2">
-                        <div class="col-md-4 col-sm-12">  
-                        <a class="btn botao-curso" href="{% url 'pagina_curso' %}" role="group" style="height: 250px; width: 250px;">
-                          </a>
-                          <p class="texto-curso">CURSO 1</p>
-                        </div>
-  
-                        <div class="col-md-4 col-sm-12">
-                        <a class="btn botao-curso" href="{% url 'pagina_curso' %}" role="group" style="height: 250px; width: 250px;">
-                          </a>
-                          <p class="texto-curso">CURSO 2</p>
-                        </div>
-                        
-                        <div class="col-md-4 col-sm-12">
-                        <a class="btn botao-curso" href="{% url 'pagina_curso' %}" role="group" style="height: 250px; width: 250px;">
-                          </a>
-                          <p class="texto-curso">CURSO 3</p>
-                        </div>
-                    </div>
-  
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+  <div class="container-fluid container-curso">
+    <div class="row">
+      <h1 class="titulo-inicio">Cursos 2</h1>
+      <div class="card blococurso">
+        <div class="row g-0">
+          <div class="col-md-12">
+            <div class="card-body">
+              <div class="row row-cols-3 blococurso2">
+                <div class="col-md-4 col-sm-12">
+                  <a class="btn botao-curso" href="{% url 'pagina_curso' %}" role="group"
+                    style="height: 250px; width: 250px;">
+                  </a>
+                  <p class="texto-curso">CURSO 1</p>
+                </div>
+
+                <div class="col-md-4 col-sm-12">
+                  <a class="btn botao-curso" href="{% url 'pagina_curso' %}" role="group"
+                    style="height: 250px; width: 250px;">
+                  </a>
+                  <p class="texto-curso">CURSO 2</p>
+                </div>
+
+                <div class="col-md-4 col-sm-12">
+                  <a class="btn botao-curso" href="{% url 'pagina_curso' %}" role="group"
+                    style="height: 250px; width: 250px;">
+                  </a>
+                  <p class="texto-curso">CURSO 3</p>
                 </div>
               </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 {% endblock %}
-     
-   

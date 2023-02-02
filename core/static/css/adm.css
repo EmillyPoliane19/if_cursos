@@ -1,6 +1,24 @@
-.c1{
+/*__________________________Geral__________________________*/
+.b1{
+    background-color: green;
+    color: green;
+    border-radius: 40px;
+    box-shadow: 10px 5px 5px rgb(134, 134, 134);
+}
+
+.b1:hover{
+    background-color: rgb(0, 83, 0);
+    color: rgb(0, 83, 0);
+}
+
+.texto-geral{
+    color: rgb(0, 39, 0);
+    font-size: 40px;
+}
+/*__________________________Curso, Área, Modalidade, Comentários__________________________*/
+.mod, .are, .cur, .com{
     height: 500px;
-    width: 650px;
+    width: 665px;
     margin-left: 360px;
     margin-right: 360px;
     margin: 0 auto; 
@@ -9,42 +27,65 @@
     text-align: center;
   }
   
-  h1{
+h1{
     color: rgb(0, 39, 0);
     text-align: center;
     margin: auto;
     float: right;
 }
 
+.mod, .cur, .are, .com {
+    margin: 0 auto; 
+    text-align: center;
+    box-shadow: 10px 5px 5px rgb(134, 134, 134);
+  }
 
+h1{
+    color:rgb(0, 56, 0);
+}
+
+/*__________________________Botões Gerais__________________________*/
 .b2{
     background-color: green;
     color: green;
     border-radius: 40px;
 }
-
 .b2:hover{
     background-color: rgb(0, 83, 0);
     color: rgb(0, 83, 0);
 }
 
-.texto-modal{
-    color: white;
-    font: size 100px;
-    text-align: left;
-    border-radius: 20px;  
+/*Cruds de Cadastro*/
+.titulo-cruds{
+    margin: auto;
 }
+
+.botao-cruds{ 
+    margin: auto;
+    color:white;
+}
+
+.botao-cruds:hover{
+    color: white;
+}
+
+.bloco-titulo-cruds{
+    padding-bottom: 16px;
+}
+
+/*Cruds de Listagem*/
+.alert-danger{
+    width: 100%;
+}
+/*__________________________Cruds__________________________*/
 
 .titulo-crud{
     text-align: center;
     margin: 0 auto;
+    color:rgb(0, 83, 0);
 }
 
-.cadastro{
-    text-align: left;
-}
-
-/*Login*/
+/*__________________________Login e Registro__________________________*/
 .bloco-login{
     height: 400px;
     width: 400px;
@@ -75,7 +116,6 @@
     margin-top: 10px;
 }
 
-/*Registro*/
 .bloco-registro{
     height: 650px;
     width: 400px;
@@ -101,30 +141,4 @@
     border-radius: 20px;
     text-align: center;
 
-}
-/*Cadastro curso*/
-.titulo-cadastro-curso{
-    margin: auto;
-}
-
-.botao-curso{ 
-    margin: auto;
-}
-
-.botao-curso{
-    color:white;
-}
-
-.botao-curso:hover{
-    color: white;
-}
-
-.bloco-titulo-curso{
-    padding-bottom: 16px;
-}
-
-/*Cruds de Listagem*/
-.alert-danger{
-    width: 100%;
-    
 }

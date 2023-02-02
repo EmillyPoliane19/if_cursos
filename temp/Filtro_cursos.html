@@ -17,19 +17,15 @@
                     {% for novaarea in listar_areas %}
                     
                     <input type="checkbox" name="area_selecao" value="{{novaarea.id}}" 
-
                     {% for area in areas_selecionadas %}
                         {% if novaarea.id|stringformat:"i" == area %}
                         checked
                         {% endif %}
                     {% endfor%}
-
                     />{{novaarea.nome}}  
-                
                       {% empty %}
                     Nenhuma área cadastrada
                      {% endfor %}   
-
                     <p><input type="submit" value="Buscar" />
 
                 </form>
@@ -44,6 +40,5 @@
         </div>
       </div>
     </div>
-
 </div>
 {% endblock %}

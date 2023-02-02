@@ -4,37 +4,43 @@
 
 {% block conteudo %}
 <div class="container-fluid">
-  <div class="row bloco-titulo-curso">
-    <h1 class=" titulo-cadastro-curso"><b>Modalidades Cadastradas</b></h1> 
-    <a class="btn b2 botao-curso" href="{% url 'cadastro_modalidade' %}" role="button" style="height: 40px; width: 250px;"><p>Cadastrar nova área</p></a>
+  <div class="row bloco-titulo-cruds">
+    <h1 class=" titulo-cruds"><b>Modalidades Cadastradas</b></h1>
+    <a class="btn b2 botao-cruds" href="{% url 'cadastro_modalidade' %}" role="button" style="height: 40px; width: 250px;">
+      <p>Cadastrar nova área</p>
+    </a>
   </div>
-      <div class="card c1">
-        <div class="row g-0">
-            <div class="card-body">
-                <table class="table table-success table-striped" border="2">                
-                  <thead>                  
-                      <tr>
-                          <th>Nome</th>
-                          <th colspan="4">Actions</th>
-                      </tr>
-                  </thead>
-                  <tbody class="table-active">
-                      {% for novamodalidade in todas_modalidade %}
-                      <tr>
-                        <td>{{ novamodalidade.nome }}</td>
-                        <td><n></td>
-                        <td><a href="{% url 'editar_modalidades' novamodalidade.id %}"><button type="button" class="btn btn-success">Editar</button></td></a>
-                        <td><a href="{% url 'remover_modalidades' novamodalidade.id %}"><button type="button" class="btn btn-danger">Remover</button></td></a>
-                        <td>
-                          {% empty %}
-                            <div class="alert alert-danger alerta" role="alert">Não Existem Modalidades Cadastradas!</div>                         
-                        </td>
-                      </tr>
-                       {% endfor %}     
-                  </tbody> 
-                </table>   
-            </div>
-          </div>
-        </div>   
-</div>    
+  <div class="card mod">
+    <div class="row g-0">
+      <div class="card-body">
+        <table class="table table-success table-striped" border="2">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th colspan="4">Actions</th>
+            </tr>
+          </thead>
+          <tbody class="table-active">
+            {% for novamodalidade in todas_modalidade %}
+            <tr>
+              <td>{{ novamodalidade.nome }}</td>
+              <td>
+                <n>
+              </td>
+              <td><a href="{% url 'editar_modalidades' novamodalidade.id %}"><button type="button"
+                    class="btn btn-success">Editar</button></td></a>
+              <td><a href="{% url 'remover_modalidades' novamodalidade.id %}"><button type="button"
+                    class="btn btn-danger">Remover</button></td></a>
+              <td>
+                {% empty %}
+                <div class="alert alert-danger alerta" role="alert">Não Existem Modalidades Cadastradas!</div>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}

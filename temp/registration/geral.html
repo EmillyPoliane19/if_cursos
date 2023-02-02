@@ -3,29 +3,29 @@
 {% load static %}
 
 {% block conteudo %}
-    <div class="container overflow-hidden text-center">
-        <div class="row gy-5">
-          <div class="col-md-6 col-sm-12">
-            <a class="btn b1" href="{% url 'cursos' %}" role="button" style="height: 300px; width: 300px;">
-            <img src="{% static 'imgs/cursos.png' %}" style="height: 260px; width: 260px;"></a>
-            <p class="texto-geral"><b>CURSOS</b></p>
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <a class="btn b1" href="{% url 'modalidade' %}" role="button" style="height: 300px; width: 300px;">
-            <img src="{% static 'imgs/modalidades.png' %}" style="height: 280px; width: 280px;"></a>
-            <p class="texto-geral"><b>MODALIDADES</b></p>
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <a class="btn b1" href="{% url 'area' %}" role="button" style="height: 300px; width: 300px;">
-            <img src="{% static 'imgs/areas.png' %}" style="height: 280px; width: 280px;"></a>
-            <p class="texto-geral"><b>ÁREAS</b></p>
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <a class="btn b1" href="{% url 'comentario' %}" role="button" style="height: 300px; width: 300px;">
-            <img src="{% static 'imgs/comentario.png' %}" style="height: 270px; width: 270px;"></a>
-            <p class="texto-geral"><b>COMENTÁRIOS</b></p>
-          </div>
-        </div>
-      </div>
+<div class="container overflow-hidden text-center">
+  <div class="row gy-5">
+    <div class="col-md-6 col-sm-12">
+      <a class="btn b1" href="{% url 'cursos' %}" role="button" style="height: 300px; width: 300px;">
+        <img src="{% static 'imgs/cursos.png' %}" style="height: 260px; width: 260px;"></a>
+      <p class="texto-geral"><b>CURSOS</b></p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <a class="btn b1" href="{% url 'modalidade' %}" role="button" style="height: 300px; width: 300px;">
+        <img src="{% static 'imgs/modalidades.png' %}" style="height: 280px; width: 280px;"></a>
+      <p class="texto-geral"><b>MODALIDADES</b></p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <a class="btn b1" href="{% url 'area' %}" role="button" style="height: 300px; width: 300px;">
+        <img src="{% static 'imgs/areas.png' %}" style="height: 280px; width: 280px;"></a>
+      <p class="texto-geral"><b>ÁREAS</b></p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <a class="btn b1" href="{% url 'comentario' %}" role="button" style="height: 300px; width: 300px;">
+        <img src="{% static 'imgs/comentario.png' %}" style="height: 270px; width: 270px;"></a>
+      <p class="texto-geral"><b>COMENTÁRIOS</b></p>
+    </div>
+  </div>
+</div>
 
 {% endblock %}

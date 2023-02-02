@@ -1,5 +1,8 @@
-
-/*Navbar do site*/
+main{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    }
+/*__________________________Navbar do site__________________________*/
 .navbar, .offcanvas-header{
     background: url("/static/imgs/poligonos.png");
 }
@@ -33,22 +36,83 @@ body {
     background-color: #fAf8f9;
 }
 
-/*Página inicial*/
+/*__________________________Página inicial__________________________*/
 
 .botao-slide{
     margin-top: 10px;
 }
 
-.rodape {
-    position:absolute;
-    width: 100%;
-    height: 100px;    
-    text-align: center;
-    line-height: 100px;
-    background: url("/static/imgs/poligonos.png");
-    margin-top: 190px;
+/*Carousel*/
+.carousel{
+    position: relative;
+}
+
+.carousel-control-prev, .carousel-control-next{
+    bottom: 5%;
+}
+
+.carousel-indicators{
+    bottom: 2%;
+}
+
+ .img2, .img3{
+    height: 500px;
+    width: 400px;
+}
+
+.img {
+    height: 500px;
+    width: 400px;   
+}
+
+
+.curso{ 
+    text-align: left;
+}
+
+
+/*Bloco dos cursos*/
+.blococurso{
+    max-width: 1200px;
+    min-width: 100px;
+    max-height: 1000px;
+    min-height: 400px;
+    margin: 0 auto; 
+    color: green;
+    background-color: green;
+    justify-content: center;
+    padding: auto;
+    padding-left: 110px;
+    justify-content: center;
+    box-shadow: 10px 5px 5px rgb(134, 134, 134);
+
     
 }
+
+.container-curso{
+    margin-top: 80px;
+}
+
+.titulo-inicio{
+    text-align: center;
+    margin-right: 450px;
+    
+}
+
+.texto-curso1{
+    margin-left: 20px;
+    color: white;
+    font-size: 30px;
+    text-align:left;
+}
+
+.texto-curso3{
+    margin-left: 60px;
+    color: white;
+    font-size: 30px;
+    text-align:left;
+}
+
 
 .botao-curso{
     background-color: rgb(78, 197, 78);
@@ -76,11 +140,22 @@ body {
 
 .titulo-curso{
     color: rgb(255, 255, 255);
-    margin-left: -110px;
+    margin-left: -110px;   
 }
-/*Filtro*/
+.rodape {
+    position:absolute;
+    width: 100%;
+    height: 100px;    
+    text-align: center;
+    line-height: 100px;
+    background: url("/static/imgs/poligonos.png");
+    margin-top: 190px;
+    
+}
+
+/*__________________________Filtro__________________________*/
 .titulo-filtro{
-    color: #000;
+    color:rgb(0, 83, 0);
 }
 .div-principal{
     margin-top: 20px; 
@@ -115,7 +190,8 @@ body {
     padding-top: 13px;
 }
 
-/*Página curso*/
+
+/*__________________________Página curso__________________________*/
 .bloco-pag-curso{
     height: 300px;
     width: 1200px;
@@ -126,10 +202,11 @@ body {
     background-color: green;
 }
 
-.titulo-topico-curso{
+.titulos{
     text-align: center;
     margin: 0 auto;
-    
+    font-weight: bold;
+    color: rgb(0, 39, 0);
 }
 
 .titulo-topico-curso2{
@@ -170,33 +247,7 @@ body {
     color: rgb(0, 83, 0);
 }
 
-/*Geral*/
-.b1{
-    background-color: green;
-    color: green;
-    border-radius: 40px;
-    box-shadow: 10px 5px 5px rgb(134, 134, 134);
-}
 
-.b1:hover{
-    background-color: rgb(0, 83, 0);
-    color: rgb(0, 83, 0);
-}
+/*__________________________Comentários__________________________*/
 
-.texto-geral{
-    color: rgb(0, 39, 0);
-    font-size: 40px;
-}
-
-/*Comentários*/
-
-.c1{
-    margin: 0 auto; 
-    text-align: center;
-    box-shadow: 10px 5px 5px rgb(134, 134, 134);
-  }
-
-h1{
-    color: rgb(0, 0, 0);
-}
 

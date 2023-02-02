@@ -3,30 +3,29 @@
 {% load static %}
 
 {% block conteudo %}
-    <div class="container-fluid">
-    <div class="row">   
-        <h1 class="titulo-crud">Cadastro de áreas</h1> 
-        <div class="card c1">
-        <div class="col-md-8">
+<div class="container-fluid">
+  <div class="row">
+    <h1 class="titulo-crud">Cadastro de áreas</h1>
+    <div class="card are">
+      <div class="col-md-8">
         <div class="card-body">
-            <div>
-            <form method="post">
+          <form method="post">
             {% csrf_token %}
             <div class="registro">
               <div class='input-box'>
                 <label for="nome">Nome</label>
-                {% render_field form_area.nome class="input"% id="nome" placeholder="Humanas" value="" %}
+                {% render_field form_area.nome class="input"% id="nome" placeholder="Digite uma área" value="" %}
               </div>
-            <p class="cadastro">
-            <input type="submit"value="Cadastrar" class="btn btn-success cad" />
-            </p>
-            </form>
+              <p class="btn-cadastro">
+                <input type="submit" value="Cadastrar" class="btn btn-success cad" />
+              </p>
             </div>
-            </div>
+          </form>
         </div>
-        </div>
-        </div>
-        </div>
-        
-    
+      </div>
+    </div>
+  </div>
+</div>
+
+
 {% endblock %}

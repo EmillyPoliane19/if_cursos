@@ -5,47 +5,49 @@
 {% block conteudo %}
 
 <div class="container-fluid">
-  <div class="row">   
-      <h1 class="titulo-crud">Cadastro de cursos</h1> 
-      <div class="card c1">
+  <div class="row">
+    <h1 class="titulo-crud">Cadastro de cursos</h1>
+    <div class="card cur">
       <div class="col-md-8">
-      <div class="card-body">
-            <div class="container_curso">
-                <form method="post">
-                  {% csrf_token %}
-                <div class="row">                    
-                  <div class="col">
-                    <p class="texto-modal">Nome:  </br> {{ form_cursos.nome }}</p>
-                  </div>
-                  <div class="col">
-                    <p class="texto-modal">Área:  </br> {{ form_cursos.area }}</p>
+        <div class="card-body">
+          <div class="container_curso">
+            <form method="post">
+              {% csrf_token %}
+              <div class="registro">
+                <div class='input-box'>
+                  <label for="nome">Nome:</label>
+                  {% render_field form_cursos.nome class="input"% id="nome" placeholder="Digite um curso" value="" %}
+                </div>
+                <div class='input-box'>
+                  <label for="area">Area:</label>
+                  {% render_field form_cursos.area class="input"% id="area" placeholder="" value="" %}
+                </div>
+                <div class='input-box'>
+                  <label for="modalidade">Modalidade:</label>
+                  {% render_field form_cursos.modalidade class="input"% id="modalidade" placeholder="" value="" %}
+                </div>
+                <div class='input-box'>
+                  <label for="duracao">Duração:</label>
+                  {% render_field form_cursos.duracao class="input"% id="duracao" placeholder="" value="" %}
+                </div>
+                <div class='input-box'>
+                  <label for="carghor">Carga Horária:</label>
+                  {% render_field form_cursos.carghor class="input"% id="carghor" placeholder="" value="" %}
+                </div>
+                <div>
+                  <div class>
+                    <p style="padding-top: 10px;" class="btn-cadastro">
+                      <input type="submit" value="Cadastrar" class="btn btn-success cad" />
+                    </p>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col">
-                    <p class="texto-modal">Modalidade: </br>  {{ form_cursos.modalidade }}</p>
-                  </div>
-                  <div class="col">
-                    <p class="texto-modal">Duração: </br>  {{ form_cursos.duracao }}</p> 
-                  </div>
-                </div>
-                
-                  <div>
-                    <p class="texto-modal">Carga Horária: </br>   {{ form_cursos.carghor }} </p>
-                  </div>
-                  <div>
-                    <div class>
-                     <p style="padding-top: 10px;" class="cadastro">
-                     <input type="submit"value="Cadastrar" class="btn btn-success cad" /></p>   
-                    </div>
-                  </div>
-                </div>
-                </form>
-            </div>
+          </div>
+          </form>
         </div>
-        </div>
-        </div>
+      </div>
     </div>
+  </div>
 </div>
-    
+</div>
+
 {% endblock %}
