@@ -12,11 +12,11 @@
             <div>
             <form method="post">
             {% csrf_token %}
-            <p class="texto-modal">
-                NOME:
-            </p>
-            <p class="texto-modal">{{ form_area.nome }} 
-            </p>
+            <div class="registro">
+              <div class='input-box'>
+                <label for="nome">Nome</label>
+                {% render_field form_area.nome class="input"% id="nome" placeholder="Humanas" value="" %}
+              </div>
             <p class="cadastro">
             <input type="submit"value="Cadastrar" class="btn btn-success cad" />
             </p>
