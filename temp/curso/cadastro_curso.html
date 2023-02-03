@@ -7,31 +7,31 @@
 <div class="container-fluid">
   <div class="row">
     <h1 class="titulo-crud">Cadastro de cursos</h1>
-    <div class="card cur">
-      <div class="col-md-8">
+    <div class="card cur1">
+      <div class="col">
         <div class="card-body">
           <div class="container_curso">
             <form method="post">
               {% csrf_token %}
-              <div class="registro">
-                <div class='input-box'>
-                  <label for="nome">Nome:</label>
+              <div class="cruds">
+                <div class='input-cadastro'>
+                  <label for="nome">Nome:</label><br>
                   {% render_field form_cursos.nome class="input"% id="nome" placeholder="Digite um curso" value="" %}
                 </div>
-                <div class='input-box'>
-                  <label for="area">Area:</label>
+                <div class='input-cadastro'> 
+                  <label for="area">Area:</label><br/>
                   {% render_field form_cursos.area class="input"% id="area" placeholder="" value="" %}
                 </div>
-                <div class='input-box'>
-                  <label for="modalidade">Modalidade:</label>
+                <div class='input-cadastro'>
+                  <label for="modalidade">Modalidade:</label><br/>
                   {% render_field form_cursos.modalidade class="input"% id="modalidade" placeholder="" value="" %}
                 </div>
-                <div class='input-box'>
-                  <label for="duracao">Duração:</label>
+                <div class='input-cadastro'>
+                  <label for="duracao">Duração:</label><br>
                   {% render_field form_cursos.duracao class="input"% id="duracao" placeholder="" value="" %}
                 </div>
-                <div class='input-box'>
-                  <label for="carghor">Carga Horária:</label>
+                <div class='input-cadastro'>
+                  <label for="carghor">Carga Horária:</label><br>
                   {% render_field form_cursos.carghor class="input"% id="carghor" placeholder="" value="" %}
                 </div>
                 <div>

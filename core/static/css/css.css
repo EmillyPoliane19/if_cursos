@@ -170,7 +170,9 @@ body {
     margin-right: 50px;
     box-shadow: 10px 5px 5px rgb(134, 134, 134);
   }
-  
+.btn-cadastro{
+    padding-top: 10px;
+}
 .bloco2{
     height: 500px;
     width: 800px; 
@@ -178,7 +180,17 @@ body {
     background-color: rgb(0, 56, 0);    
     box-shadow: 10px 5px 5px rgb(134, 134, 134);
 }
-
+.div-filtro {
+    padding-top: 10px;
+    text-align: center;
+}
+.list-group-item-success{
+    color: black;
+}
+.div-filtro p {
+    background-color: rgb(58, 116, 58);
+    text-align: center;
+}
 .titulo-filtro{
     text-align: center;
     padding-left: 50px;
@@ -190,7 +202,11 @@ body {
     padding-top: 13px;
 }
 
-
+.input-filtro input{
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+}
 /*__________________________Página curso__________________________*/
 .bloco-pag-curso{
     height: 300px;

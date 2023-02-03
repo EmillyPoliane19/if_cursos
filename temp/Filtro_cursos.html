@@ -12,31 +12,43 @@
                 <p class="texto-filtro"><b>Filtros</b></p>
                 <form method="post">
                     {% csrf_token %}
-                    <p>Palavra-chave:</p>
+                    <div class="input-filtro">
+                    <p>Busque aqui:</p>
                     <p><input type="text" name="palavra" value="{{palavra}}" placeholder="Pesquisar" /></p>
+                    </div>
+                    <div>
                     {% for novaarea in listar_areas %}
                     
-                    <input type="checkbox" name="area_selecao" value="{{novaarea.id}}" 
+                    <input class="form-check-input" type="checkbox" name="area_selecao" value="{{novaarea.id}}" 
                     {% for area in areas_selecionadas %}
                         {% if novaarea.id|stringformat:"i" == area %}
                         checked
                         {% endif %}
                     {% endfor%}
-                    />{{novaarea.nome}}  
+                    />
+                    
+                      {{novaarea.nome}}  
                       {% empty %}
                     Nenhuma área cadastrada
                      {% endfor %}   
-                    <p><input type="submit" value="Buscar" />
-
+                     <p class="btn-cadastro">
+                        <input type="submit" value="Buscar" class="btn btn-success cad" />
+                      </p>
+                    </div>
                 </form>
             </div>
         </div>
         <div class="col-md-8 col-sm-12 bloco2">
+            <div class="div-filtro">
+            <p>Cursos Disponíveis</p>
             {% for curso in listar_cursos %}
-            <p>Nome: {{curso.nome}}</p>
-            {% empty %}
-            <p>Nenhum curso encontrado</p>
-            {% endfor %}
+            <ul class="list-group-item-success filtro-titulo">
+                <li class="list-group-item">{{curso.nome}}</li>
+            </ul>
+                {% empty %}
+                <p>Nenhum curso encontrado</p>
+                {% endfor %}
+            </div>
         </div>
       </div>
     </div>
