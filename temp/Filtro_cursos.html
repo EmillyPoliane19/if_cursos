@@ -46,7 +46,7 @@
                 <li class="list-group-item">{{curso.nome}}</li>
             </ul>
                 {% empty %}
-                <p>Nenhum curso encontrado</p>
+                <div class="alert alert-danger alerta" role="alert">Nenhum curso encontrado</div>
                 {% endfor %}
             </div>
         </div>

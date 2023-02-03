@@ -28,12 +28,13 @@
                 <n>
               </td>
               <td><a href="{% url 'editar_modalidades' novamodalidade.id %}"><button type="button"
-                    class="btn btn-success">Editar</button></td></a>
+                    class="btn btn-success">Editar</button></a></td>
               <td><a href="{% url 'remover_modalidades' novamodalidade.id %}"><button type="button"
-                    class="btn btn-danger">Remover</button></td></a>
+                    class="btn btn-danger">Remover</button></a></td>
               <td>
                 {% empty %}
-                <div class="alert alert-danger alerta" role="alert">Não Existem Modalidades Cadastradas!</div>
+                
+                <td colspan="5"><div class="alert alert-danger alerta" role="alert">Não Existem Modalidades Cadastradas!</div></td>
               </td>
             </tr>
             {% endfor %}

@@ -7,6 +7,7 @@
 <div class="container-fluid">
   <div class="row">
     <h1 class="titulo-crud">Cadastro de cursos</h1>
+    <br/><br/><br/>
     <div class="card cur1">
       <div class="col">
         <div class="card-body">
@@ -19,20 +20,20 @@
                   {% render_field form_cursos.nome class="input"% id="nome" placeholder="Digite um curso" value="" %}
                 </div>
                 <div class='input-cadastro'> 
-                  <label for="area">Area:</label><br/>
-                  {% render_field form_cursos.area class="input"% id="area" placeholder="" value="" %}
+                  <label for="area">Área:</label><br/>
+                  {% render_field form_cursos.area class="input"% id="area" placeholder="ex: Humanas" value="" %}
                 </div>
                 <div class='input-cadastro'>
                   <label for="modalidade">Modalidade:</label><br/>
-                  {% render_field form_cursos.modalidade class="input"% id="modalidade" placeholder="" value="" %}
+                  {% render_field form_cursos.modalidade class="input"% id="modalidade" placeholder="ex: Integral" value="" %}
                 </div>
                 <div class='input-cadastro'>
                   <label for="duracao">Duração:</label><br>
-                  {% render_field form_cursos.duracao class="input"% id="duracao" placeholder="" value="" %}
+                  {% render_field form_cursos.duracao class="input"% id="duracao" placeholder="0 anos" value="" %}
                 </div>
                 <div class='input-cadastro'>
                   <label for="carghor">Carga Horária:</label><br>
-                  {% render_field form_cursos.carghor class="input"% id="carghor" placeholder="" value="" %}
+                  {% render_field form_cursos.carghor class="input"% id="carghor" placeholder="000" value="" %}
                 </div>
                 <div>
                   <div class>

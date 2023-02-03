@@ -87,7 +87,6 @@ h1{
 .bloco-titulo-cruds{
     padding-bottom: 16px;
 }
-
 /*Cruds de Listagem*/
 .alert-danger{
     width: 100%;
@@ -108,6 +107,9 @@ h1{
 label{
     color: white;
     padding: 3px;
+}
+.tabela{
+    width: 608px;
 }
 /*__________________________Login e Registro__________________________*/
 .bloco-login{
